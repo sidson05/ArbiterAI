@@ -1,0 +1,25 @@
+{
+  "claim_id": "CLM-2026-0007",
+  "claimant_id": "CUST-6514",
+  "claimant_name": "Sophia Williams",
+  "policy_id": "POL-HLT-002",
+  "category": "Mental Health",
+  "claim_text": "Inpatient admission to Horizon Behavioral Health Centre for acute major depressive disorder and psychiatric crisis stabilization for 10 days.",
+  "claimed_amount": 4116.0,
+  "claimed_items": [
+    {
+      "item": "Inpatient Psychiatric Care & Therapy",
+      "amount": 4200.0
+    }
+  ],
+  "incident_date": "2026-04-18",
+  "receipt_hash": "HASH-CLM-2026-0007-57052",
+  "expected_decision": "APPROVED",
+  "expected_cited_clauses": [
+    "Clause 2.1"
+  ],
+  "is_fraud": false,
+  "fraud_reason": null,
+  "requires_human_review": false,
+  "evaluation_notes": "Covered within the $5,000 mental health annual aggregate limit."
+}

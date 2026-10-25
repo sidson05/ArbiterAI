@@ -1,0 +1,35 @@
+{
+  "claim_id": "CLM-2026-0120",
+  "claimant_id": "CUST-3977",
+  "claimant_name": "Emma Rodriguez",
+  "policy_id": "POL-HLT-002",
+  "category": "Robotic Surgery",
+  "claim_text": "Patient admitted for Da Vinci robotic-assisted laparoscopic radical prostatectomy at Metropolitan University Hospital. Incurred 2 nights in executive suite accommodation.",
+  "claimed_amount": 9016.0,
+  "claimed_items": [
+    {
+      "item": "Robotic Instrumentation Fee",
+      "amount": 3500.0
+    },
+    {
+      "item": "Surgical Team Fee",
+      "amount": 3700.0
+    },
+    {
+      "item": "Suite Room Stay",
+      "amount": 2000.0
+    }
+  ],
+  "incident_date": "2026-03-28",
+  "receipt_hash": "HASH-CLM-2026-0120-37742",
+  "expected_decision": "APPROVED",
+  "expected_cited_clauses": [
+    "Clause 1.1",
+    "Clause 1.2",
+    "Clause 3.1"
+  ],
+  "is_fraud": false,
+  "fraud_reason": null,
+  "requires_human_review": false,
+  "evaluation_notes": "Fully covered under Gold Premier robotic surgery and suite accommodation."
+}

@@ -1,0 +1,25 @@
+{
+  "claim_id": "CLM-2026-0065",
+  "claimant_id": "CUST-9666",
+  "claimant_name": "James Moore",
+  "policy_id": "POL-HLT-002",
+  "category": "Experimental Therapy Exclusion",
+  "claim_text": "Claim for unapproved experimental peptide therapy and uncertified stem cell infusion administered at an offshore wellness retreat.",
+  "claimed_amount": 8245.0,
+  "claimed_items": [
+    {
+      "item": "Unapproved Experimental Stem Cell Injection",
+      "amount": 8500.0
+    }
+  ],
+  "incident_date": "2026-05-22",
+  "receipt_hash": "HASH-CLM-2026-0065-96951",
+  "expected_decision": "REJECTED",
+  "expected_cited_clauses": [
+    "Clause 4.1"
+  ],
+  "is_fraud": false,
+  "fraud_reason": null,
+  "requires_human_review": false,
+  "evaluation_notes": "Excluded under Clause 4.1: Unproven and experimental therapies."
+}

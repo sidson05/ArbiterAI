@@ -1,0 +1,25 @@
+{
+  "claim_id": "CLM-2026-0011",
+  "claimant_id": "CUST-4733",
+  "claimant_name": "Mia Williams",
+  "policy_id": "POL-MOT-001",
+  "category": "Drunk Driving Exclusion",
+  "claim_text": "Vehicle swerved into ditch at 2 AM. Police report indicates driver breathalyzer registered Blood Alcohol Concentration (BAC) of 0.14%, well above statutory 0.05% threshold.",
+  "claimed_amount": 5724.0,
+  "claimed_items": [
+    {
+      "item": "Chassis & Suspension Repair",
+      "amount": 5400.0
+    }
+  ],
+  "incident_date": "2026-04-11",
+  "receipt_hash": "HASH-CLM-2026-0011-23238",
+  "expected_decision": "REJECTED",
+  "expected_cited_clauses": [
+    "Clause 3.1"
+  ],
+  "is_fraud": false,
+  "fraud_reason": null,
+  "requires_human_review": false,
+  "evaluation_notes": "Strictly excluded under Clause 3.1 for driving while intoxicated."
+}

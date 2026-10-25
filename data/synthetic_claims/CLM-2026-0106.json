@@ -1,0 +1,25 @@
+{
+  "claim_id": "CLM-2026-0106",
+  "claimant_id": "CUST-8373",
+  "claimant_name": "Alexander Davis",
+  "policy_id": "POL-MOT-001",
+  "category": "Drunk Driving Exclusion",
+  "claim_text": "Vehicle swerved into ditch at 2 AM. Police report indicates driver breathalyzer registered Blood Alcohol Concentration (BAC) of 0.14%, well above statutory 0.05% threshold.",
+  "claimed_amount": 5670.0,
+  "claimed_items": [
+    {
+      "item": "Chassis & Suspension Repair",
+      "amount": 5400.0
+    }
+  ],
+  "incident_date": "2026-04-11",
+  "receipt_hash": "HASH-CLM-2026-0106-46347",
+  "expected_decision": "REJECTED",
+  "expected_cited_clauses": [
+    "Clause 3.1"
+  ],
+  "is_fraud": false,
+  "fraud_reason": null,
+  "requires_human_review": false,
+  "evaluation_notes": "Strictly excluded under Clause 3.1 for driving while intoxicated."
+}

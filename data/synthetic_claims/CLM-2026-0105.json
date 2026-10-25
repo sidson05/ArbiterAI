@@ -1,0 +1,30 @@
+{
+  "claim_id": "CLM-2026-0105",
+  "claimant_id": "CUST-7991",
+  "claimant_name": "Harper Anderson",
+  "policy_id": "POL-MOT-001",
+  "category": "Windshield Glass",
+  "claim_text": "Gravel airborne from highway truck struck front windshield causing extensive spiderweb cracking. Replacement of original OEM laminated windshield.",
+  "claimed_amount": 795.0,
+  "claimed_items": [
+    {
+      "item": "OEM Front Glass Windshield",
+      "amount": 600.0
+    },
+    {
+      "item": "Fitting & Sensor Calibration",
+      "amount": 150.0
+    }
+  ],
+  "incident_date": "2026-03-04",
+  "receipt_hash": "HASH-CLM-2026-0105-72216",
+  "expected_decision": "APPROVED",
+  "expected_cited_clauses": [
+    "Clause 1.1",
+    "Clause 2.2"
+  ],
+  "is_fraud": false,
+  "fraud_reason": null,
+  "requires_human_review": false,
+  "evaluation_notes": "Glass components carry 0% depreciation deduction under Clause 2.2."
+}

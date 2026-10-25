@@ -1,0 +1,25 @@
+{
+  "claim_id": "CLM-2026-0069",
+  "claimant_id": "CUST-2512",
+  "claimant_name": "Charlotte Rodriguez",
+  "policy_id": "POL-MOT-001",
+  "category": "Total Loss Burglary",
+  "claim_text": "Vehicle stolen from residential driveway overnight. Police FIR lodged immediately; vehicle unrecovered after 30 days. Insured Declared Value (IDV) is $24,000.",
+  "claimed_amount": 22320.0,
+  "claimed_items": [
+    {
+      "item": "Total Loss Vehicle IDV",
+      "amount": 24000.0
+    }
+  ],
+  "incident_date": "2026-05-01",
+  "receipt_hash": "HASH-CLM-2026-0069-53719",
+  "expected_decision": "ESCALATED",
+  "expected_cited_clauses": [
+    "Clause 1.4"
+  ],
+  "is_fraud": false,
+  "fraud_reason": null,
+  "requires_human_review": true,
+  "evaluation_notes": "Valid total theft claim but exceeds $10k threshold, requiring senior adjuster sign-off."
+}

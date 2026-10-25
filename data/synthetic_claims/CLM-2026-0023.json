@@ -1,0 +1,29 @@
+{
+  "claim_id": "CLM-2026-0023",
+  "claimant_id": "CUST-3504",
+  "claimant_name": "Olivia Wilson",
+  "policy_id": "POL-HLT-001",
+  "category": "Cosmetic Exclusion",
+  "claim_text": "Patient underwent elective aesthetic rhinoplasty and septoplasty for facial aesthetic enhancement at Beverly Plastic Surgery Clinic. Total invoice $6,200.",
+  "claimed_amount": 6324.0,
+  "claimed_items": [
+    {
+      "item": "Rhinoplasty Surgical Fee",
+      "amount": 4500.0
+    },
+    {
+      "item": "Anesthesia & Facility Fee",
+      "amount": 1700.0
+    }
+  ],
+  "incident_date": "2026-06-15",
+  "receipt_hash": "HASH-CLM-2026-0023-60432",
+  "expected_decision": "REJECTED",
+  "expected_cited_clauses": [
+    "Clause 4.2"
+  ],
+  "is_fraud": false,
+  "fraud_reason": null,
+  "requires_human_review": false,
+  "evaluation_notes": "Aesthetic and cosmetic surgeries are permanently excluded."
+}

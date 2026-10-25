@@ -1,0 +1,25 @@
+{
+  "claim_id": "CLM-2026-0093",
+  "claimant_id": "CUST-9977",
+  "claimant_name": "James Martinez",
+  "policy_id": "POL-HOM-002",
+  "category": "Mysterious Disappearance Exclusion",
+  "claim_text": "Claimant states a gold diamond necklace disappeared from home during weekend party. No forced entry or damage to premises. Police report classifies as lost property.",
+  "claimed_amount": 3104.0,
+  "claimed_items": [
+    {
+      "item": "Gold Diamond Necklace",
+      "amount": 3200.0
+    }
+  ],
+  "incident_date": "2026-06-08",
+  "receipt_hash": "HASH-CLM-2026-0093-66346",
+  "expected_decision": "REJECTED",
+  "expected_cited_clauses": [
+    "Clause 3.1"
+  ],
+  "is_fraud": false,
+  "fraud_reason": null,
+  "requires_human_review": false,
+  "evaluation_notes": "Mysterious disappearance and unforced loss excluded under Clause 3.1."
+}

@@ -1,0 +1,25 @@
+{
+  "claim_id": "CLM-2026-0109",
+  "claimant_id": "CUST-2320",
+  "claimant_name": "David Jones",
+  "policy_id": "POL-HOM-001",
+  "category": "Gradual Seepage Exclusion",
+  "claim_text": "Homeowner reported mold growth and rotting baseboards in basement. Certified building inspector concluded damage resulted from continuous rainwater capillary seepage over 2 years.",
+  "claimed_amount": 3744.0,
+  "claimed_items": [
+    {
+      "item": "Basement Mold Removal & Foundation Sealing",
+      "amount": 3900.0
+    }
+  ],
+  "incident_date": "2026-03-15",
+  "receipt_hash": "HASH-CLM-2026-0109-30028",
+  "expected_decision": "REJECTED",
+  "expected_cited_clauses": [
+    "Clause 3.1"
+  ],
+  "is_fraud": false,
+  "fraud_reason": null,
+  "requires_human_review": false,
+  "evaluation_notes": "Gradual long-term seepage and maintenance failure excluded under Clause 3.1."
+}

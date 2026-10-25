@@ -1,0 +1,3579 @@
+[
+  {
+    "claim_id": "CLM-2026-0001",
+    "claimant_id": "CUST-2824",
+    "claimant_name": "James Rodriguez",
+    "policy_id": "POL-HLT-001",
+    "category": "Inpatient Hospitalization",
+    "claim_text": "Claimant admitted to St. Jude Hospital for 3 days due to acute viral pneumonia. Underwent IV antibiotic therapy, chest X-rays, blood cultures, and 3 nights in standard single room. Total hospital bill $3,450.",
+    "claimed_amount": 3312.0,
+    "claimed_items": [
+      {
+        "item": "Room & Board 3 days",
+        "amount": 900.0
+      },
+      {
+        "item": "Diagnostic X-rays & Blood Tests",
+        "amount": 850.0
+      },
+      {
+        "item": "Physician & Specialist Fees",
+        "amount": 700.0
+      },
+      {
+        "item": "Pharmacy & Medication",
+        "amount": 1000.0
+      }
+    ],
+    "incident_date": "2026-03-12",
+    "receipt_hash": "HASH-CLM-2026-0001-28289",
+    "expected_decision": "APPROVED",
+    "expected_cited_clauses": [
+      "Clause 1.1",
+      "Clause 1.2",
+      "Clause 1.3",
+      "Clause 3.1"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Standard covered inpatient treatment minus $250 deductible."
+  },
+  {
+    "claim_id": "CLM-2026-0002",
+    "claimant_id": "CUST-2679",
+    "claimant_name": "Harper Williams",
+    "policy_id": "POL-HLT-001",
+    "category": "Ophthalmology / Day Care",
+    "claim_text": "Patient underwent elective phacoemulsification cataract surgery for the right eye with monofocal intraocular lens insertion at City Eye Institute. Total procedure bill is $2,100.",
+    "claimed_amount": 2121.0,
+    "claimed_items": [
+      {
+        "item": "Cataract Surgery Theatre Charges",
+        "amount": 1100.0
+      },
+      {
+        "item": "Intraocular Lens Implant",
+        "amount": 700.0
+      },
+      {
+        "item": "Surgeon Consultation",
+        "amount": 300.0
+      }
+    ],
+    "incident_date": "2026-04-05",
+    "receipt_hash": "HASH-CLM-2026-0002-14165",
+    "expected_decision": "APPROVED",
+    "expected_cited_clauses": [
+      "Clause 3.2"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Approved but capped at the $1,200 sub-limit specified in Clause 3.2."
+  },
+  {
+    "claim_id": "CLM-2026-0003",
+    "claimant_id": "CUST-1488",
+    "claimant_name": "Michael Miller",
+    "policy_id": "POL-HLT-001",
+    "category": "Pre-Existing Exclusion",
+    "claim_text": "Claimant hospitalized for acute ischemic stroke and secondary hypertension. Medical records reveal ongoing treatment for chronic hypertension diagnosed 18 months prior to policy inception. Current policy active for 8 months.",
+    "claimed_amount": 7488.0,
+    "claimed_items": [
+      {
+        "item": "ICU Care 2 days",
+        "amount": 3200.0
+      },
+      {
+        "item": "Neurological Consultation & Medication",
+        "amount": 4600.0
+      }
+    ],
+    "incident_date": "2026-05-10",
+    "receipt_hash": "HASH-CLM-2026-0003-88907",
+    "expected_decision": "REJECTED",
+    "expected_cited_clauses": [
+      "Clause 4.1"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Pre-existing condition within 36-month exclusion waiting period."
+  },
+  {
+    "claim_id": "CLM-2026-0004",
+    "claimant_id": "CUST-1434",
+    "claimant_name": "Harper Miller",
+    "policy_id": "POL-HLT-001",
+    "category": "Cosmetic Exclusion",
+    "claim_text": "Patient underwent elective aesthetic rhinoplasty and septoplasty for facial aesthetic enhancement at Beverly Plastic Surgery Clinic. Total invoice $6,200.",
+    "claimed_amount": 6386.0,
+    "claimed_items": [
+      {
+        "item": "Rhinoplasty Surgical Fee",
+        "amount": 4500.0
+      },
+      {
+        "item": "Anesthesia & Facility Fee",
+        "amount": 1700.0
+      }
+    ],
+    "incident_date": "2026-06-15",
+    "receipt_hash": "HASH-CLM-2026-0004-81426",
+    "expected_decision": "REJECTED",
+    "expected_cited_clauses": [
+      "Clause 4.2"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Aesthetic and cosmetic surgeries are permanently excluded."
+  },
+  {
+    "claim_id": "CLM-2026-0005",
+    "claimant_id": "CUST-7873",
+    "claimant_name": "Ava Anderson",
+    "policy_id": "POL-HLT-001",
+    "category": "High Value Orthopedic",
+    "claim_text": "Total knee replacement surgery following severe osteoarthritic degradation. Implant surgery, 5 days hospital stay, physical therapy. Total claimed amount $14,500.",
+    "claimed_amount": 14645.0,
+    "claimed_items": [
+      {
+        "item": "Knee Prosthesis Implant",
+        "amount": 5500.0
+      },
+      {
+        "item": "Surgical Theatre & Surgeon Fee",
+        "amount": 5000.0
+      },
+      {
+        "item": "Room Rent & Nursing 5 days",
+        "amount": 4000.0
+      }
+    ],
+    "incident_date": "2026-07-20",
+    "receipt_hash": "HASH-CLM-2026-0005-10851",
+    "expected_decision": "ESCALATED",
+    "expected_cited_clauses": [
+      "Clause 3.3"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": true,
+    "evaluation_notes": "High value claim exceeding $10,000 threshold and subject to Joint Replacement Sub-Limit."
+  },
+  {
+    "claim_id": "CLM-2026-0006",
+    "claimant_id": "CUST-3615",
+    "claimant_name": "Charlotte Hernandez",
+    "policy_id": "POL-HLT-002",
+    "category": "Robotic Surgery",
+    "claim_text": "Patient admitted for Da Vinci robotic-assisted laparoscopic radical prostatectomy at Metropolitan University Hospital. Incurred 2 nights in executive suite accommodation.",
+    "claimed_amount": 8832.0,
+    "claimed_items": [
+      {
+        "item": "Robotic Instrumentation Fee",
+        "amount": 3500.0
+      },
+      {
+        "item": "Surgical Team Fee",
+        "amount": 3700.0
+      },
+      {
+        "item": "Suite Room Stay",
+        "amount": 2000.0
+      }
+    ],
+    "incident_date": "2026-03-28",
+    "receipt_hash": "HASH-CLM-2026-0006-38221",
+    "expected_decision": "APPROVED",
+    "expected_cited_clauses": [
+      "Clause 1.1",
+      "Clause 1.2",
+      "Clause 3.1"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Fully covered under Gold Premier robotic surgery and suite accommodation."
+  },
+  {
+    "claim_id": "CLM-2026-0007",
+    "claimant_id": "CUST-6514",
+    "claimant_name": "Sophia Williams",
+    "policy_id": "POL-HLT-002",
+    "category": "Mental Health",
+    "claim_text": "Inpatient admission to Horizon Behavioral Health Centre for acute major depressive disorder and psychiatric crisis stabilization for 10 days.",
+    "claimed_amount": 4116.0,
+    "claimed_items": [
+      {
+        "item": "Inpatient Psychiatric Care & Therapy",
+        "amount": 4200.0
+      }
+    ],
+    "incident_date": "2026-04-18",
+    "receipt_hash": "HASH-CLM-2026-0007-57052",
+    "expected_decision": "APPROVED",
+    "expected_cited_clauses": [
+      "Clause 2.1"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Covered within the $5,000 mental health annual aggregate limit."
+  },
+  {
+    "claim_id": "CLM-2026-0008",
+    "claimant_id": "CUST-6635",
+    "claimant_name": "Evelyn Rodriguez",
+    "policy_id": "POL-HLT-002",
+    "category": "Experimental Therapy Exclusion",
+    "claim_text": "Claim for unapproved experimental peptide therapy and uncertified stem cell infusion administered at an offshore wellness retreat.",
+    "claimed_amount": 8925.0,
+    "claimed_items": [
+      {
+        "item": "Unapproved Experimental Stem Cell Injection",
+        "amount": 8500.0
+      }
+    ],
+    "incident_date": "2026-05-22",
+    "receipt_hash": "HASH-CLM-2026-0008-70217",
+    "expected_decision": "REJECTED",
+    "expected_cited_clauses": [
+      "Clause 4.1"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Excluded under Clause 4.1: Unproven and experimental therapies."
+  },
+  {
+    "claim_id": "CLM-2026-0009",
+    "claimant_id": "CUST-9785",
+    "claimant_name": "Sophia Gonzalez",
+    "policy_id": "POL-MOT-001",
+    "category": "Accidental Collision",
+    "claim_text": "Insured vehicle collided with concrete guardrail during heavy rain. Front bumper shattered, radiator ruptured, hood crumpled. Vehicle towed to authorized repair centre.",
+    "claimed_amount": 2604.0,
+    "claimed_items": [
+      {
+        "item": "Front Bumper Replacement (Plastic)",
+        "amount": 800.0
+      },
+      {
+        "item": "Radiator Replacement",
+        "amount": 600.0
+      },
+      {
+        "item": "Hood Panel Beating & Paint",
+        "amount": 1400.0
+      }
+    ],
+    "incident_date": "2026-02-14",
+    "receipt_hash": "HASH-CLM-2026-0009-48427",
+    "expected_decision": "APPROVED",
+    "expected_cited_clauses": [
+      "Clause 1.1",
+      "Clause 2.1",
+      "Clause 2.2"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Standard collision covered minus $350 deductible and 50% depreciation on plastic bumper."
+  },
+  {
+    "claim_id": "CLM-2026-0010",
+    "claimant_id": "CUST-6925",
+    "claimant_name": "Sebastian Miller",
+    "policy_id": "POL-MOT-001",
+    "category": "Windshield Glass",
+    "claim_text": "Gravel airborne from highway truck struck front windshield causing extensive spiderweb cracking. Replacement of original OEM laminated windshield.",
+    "claimed_amount": 772.5,
+    "claimed_items": [
+      {
+        "item": "OEM Front Glass Windshield",
+        "amount": 600.0
+      },
+      {
+        "item": "Fitting & Sensor Calibration",
+        "amount": 150.0
+      }
+    ],
+    "incident_date": "2026-03-04",
+    "receipt_hash": "HASH-CLM-2026-0010-16006",
+    "expected_decision": "APPROVED",
+    "expected_cited_clauses": [
+      "Clause 1.1",
+      "Clause 2.2"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Glass components carry 0% depreciation deduction under Clause 2.2."
+  },
+  {
+    "claim_id": "CLM-2026-0011",
+    "claimant_id": "CUST-4733",
+    "claimant_name": "Mia Williams",
+    "policy_id": "POL-MOT-001",
+    "category": "Drunk Driving Exclusion",
+    "claim_text": "Vehicle swerved into ditch at 2 AM. Police report indicates driver breathalyzer registered Blood Alcohol Concentration (BAC) of 0.14%, well above statutory 0.05% threshold.",
+    "claimed_amount": 5724.0,
+    "claimed_items": [
+      {
+        "item": "Chassis & Suspension Repair",
+        "amount": 5400.0
+      }
+    ],
+    "incident_date": "2026-04-11",
+    "receipt_hash": "HASH-CLM-2026-0011-23238",
+    "expected_decision": "REJECTED",
+    "expected_cited_clauses": [
+      "Clause 3.1"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Strictly excluded under Clause 3.1 for driving while intoxicated."
+  },
+  {
+    "claim_id": "CLM-2026-0012",
+    "claimant_id": "CUST-7227",
+    "claimant_name": "Alexander Anderson",
+    "policy_id": "POL-MOT-001",
+    "category": "Total Loss Burglary",
+    "claim_text": "Vehicle stolen from residential driveway overnight. Police FIR lodged immediately; vehicle unrecovered after 30 days. Insured Declared Value (IDV) is $24,000.",
+    "claimed_amount": 24480.0,
+    "claimed_items": [
+      {
+        "item": "Total Loss Vehicle IDV",
+        "amount": 24000.0
+      }
+    ],
+    "incident_date": "2026-05-01",
+    "receipt_hash": "HASH-CLM-2026-0012-57819",
+    "expected_decision": "ESCALATED",
+    "expected_cited_clauses": [
+      "Clause 1.4"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": true,
+    "evaluation_notes": "Valid total theft claim but exceeds $10k threshold, requiring senior adjuster sign-off."
+  },
+  {
+    "claim_id": "CLM-2026-0013",
+    "claimant_id": "CUST-3664",
+    "claimant_name": "Isabella Lopez",
+    "policy_id": "POL-HOM-001",
+    "category": "Sudden Pipe Burst",
+    "claim_text": "Internal second-floor bathroom copper supply pipe burst suddenly due to freezing temperatures, causing ceiling collapse and structural drywall flooding into ground floor living room.",
+    "claimed_amount": 4560.0,
+    "claimed_items": [
+      {
+        "item": "Drywall and Ceiling Structural Restoration",
+        "amount": 2800.0
+      },
+      {
+        "item": "Plumbing Pipe Replacement & Testing",
+        "amount": 800.0
+      },
+      {
+        "item": "Hardwood Floor Drying & Remediation",
+        "amount": 1200.0
+      }
+    ],
+    "incident_date": "2026-01-20",
+    "receipt_hash": "HASH-CLM-2026-0013-44993",
+    "expected_decision": "APPROVED",
+    "expected_cited_clauses": [
+      "Clause 1.3",
+      "Clause 2.1"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Sudden bursting covered minus $500 property deductible."
+  },
+  {
+    "claim_id": "CLM-2026-0014",
+    "claimant_id": "CUST-2169",
+    "claimant_name": "Evelyn Garcia",
+    "policy_id": "POL-HOM-001",
+    "category": "Gradual Seepage Exclusion",
+    "claim_text": "Homeowner reported mold growth and rotting baseboards in basement. Certified building inspector concluded damage resulted from continuous rainwater capillary seepage over 2 years.",
+    "claimed_amount": 3939.0,
+    "claimed_items": [
+      {
+        "item": "Basement Mold Removal & Foundation Sealing",
+        "amount": 3900.0
+      }
+    ],
+    "incident_date": "2026-03-15",
+    "receipt_hash": "HASH-CLM-2026-0014-42087",
+    "expected_decision": "REJECTED",
+    "expected_cited_clauses": [
+      "Clause 3.1"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Gradual long-term seepage and maintenance failure excluded under Clause 3.1."
+  },
+  {
+    "claim_id": "CLM-2026-0015",
+    "claimant_id": "CUST-3677",
+    "claimant_name": "Lucas Gonzalez",
+    "policy_id": "POL-HOM-001",
+    "category": "Major Fire Damage",
+    "claim_text": "Kitchen grease fire spread to roof rafters and attic structure. Fire service response extinguished flames but upper level sustained major structural charring. Claim includes temporary rental housing.",
+    "claimed_amount": 27360.0,
+    "claimed_items": [
+      {
+        "item": "Roof & Structural Timber Rebuilding",
+        "amount": 22000.0
+      },
+      {
+        "item": "Temporary Accommodation 3 Months",
+        "amount": 6500.0
+      }
+    ],
+    "incident_date": "2026-04-02",
+    "receipt_hash": "HASH-CLM-2026-0015-93886",
+    "expected_decision": "ESCALATED",
+    "expected_cited_clauses": [
+      "Clause 1.1",
+      "Clause 2.2"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": true,
+    "evaluation_notes": "High value claim ($28.5k) routed to human adjuster for contractor quote validation."
+  },
+  {
+    "claim_id": "CLM-2026-0016",
+    "claimant_id": "CUST-4598",
+    "claimant_name": "William Johnson",
+    "policy_id": "POL-HOM-002",
+    "category": "Burglary Forced Entry",
+    "claim_text": "Apartment rear patio door forced open with crowbar while tenant was at work. Burglar took 65-inch OLED television, gaming console, laptop, and leather jacket. Police evidence of jimmy marks attached.",
+    "claimed_amount": 2976.0,
+    "claimed_items": [
+      {
+        "item": "65-inch 4K OLED TV",
+        "amount": 1600.0
+      },
+      {
+        "item": "Gaming Console & Controllers",
+        "amount": 600.0
+      },
+      {
+        "item": "Laptop Computer",
+        "amount": 900.0
+      }
+    ],
+    "incident_date": "2026-05-18",
+    "receipt_hash": "HASH-CLM-2026-0016-14207",
+    "expected_decision": "APPROVED",
+    "expected_cited_clauses": [
+      "Clause 1.1",
+      "Clause 2.1",
+      "Clause 2.2"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Forcible burglary covered minus $200 deductible; items within single-item limit."
+  },
+  {
+    "claim_id": "CLM-2026-0017",
+    "claimant_id": "CUST-6168",
+    "claimant_name": "Benjamin Rodriguez",
+    "policy_id": "POL-HOM-002",
+    "category": "Mysterious Disappearance Exclusion",
+    "claim_text": "Claimant states a gold diamond necklace disappeared from home during weekend party. No forced entry or damage to premises. Police report classifies as lost property.",
+    "claimed_amount": 2976.0,
+    "claimed_items": [
+      {
+        "item": "Gold Diamond Necklace",
+        "amount": 3200.0
+      }
+    ],
+    "incident_date": "2026-06-08",
+    "receipt_hash": "HASH-CLM-2026-0017-84341",
+    "expected_decision": "REJECTED",
+    "expected_cited_clauses": [
+      "Clause 3.1"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Mysterious disappearance and unforced loss excluded under Clause 3.1."
+  },
+  {
+    "claim_id": "CLM-2026-0018",
+    "claimant_id": "CUST-6155",
+    "claimant_name": "Daniel Thomas",
+    "policy_id": "POL-MOT-001",
+    "category": "Duplicate Invoice Fraud",
+    "claim_text": "Claim for bumper repair and paint respray following collision. Attached invoice receipt matches identical invoice number and transaction hash as claim CLM-2025-8812 submitted 3 months ago.",
+    "claimed_amount": 1911.0,
+    "claimed_items": [
+      {
+        "item": "Bumper Respray and Repair",
+        "amount": 1950.0
+      }
+    ],
+    "incident_date": "2026-06-25",
+    "receipt_hash": "DUP-HASH-99812-REPAIR",
+    "expected_decision": "ESCALATED",
+    "expected_cited_clauses": [
+      "Clause 1.1"
+    ],
+    "is_fraud": true,
+    "fraud_reason": "Duplicate invoice hash detected across previous claims database.",
+    "requires_human_review": true,
+    "evaluation_notes": "Flagged by fraud guard and escalated to SIU (Special Investigation Unit)."
+  },
+  {
+    "claim_id": "CLM-2026-0019",
+    "claimant_id": "CUST-8517",
+    "claimant_name": "David Rodriguez",
+    "policy_id": "POL-HLT-001",
+    "category": "Inception Fraud",
+    "claim_text": "Policy activated on May 10, 2026. Claim filed on May 12, 2026 for extensive multi-week lumbar spine treatment with doctor notes dating back to April 2026 prior to policy bound date.",
+    "claimed_amount": 4042.0,
+    "claimed_items": [
+      {
+        "item": "Spinal Therapy & Injections",
+        "amount": 4300.0
+      }
+    ],
+    "incident_date": "2026-05-11",
+    "receipt_hash": null,
+    "expected_decision": "ESCALATED",
+    "expected_cited_clauses": [
+      "Clause 4.1"
+    ],
+    "is_fraud": true,
+    "fraud_reason": "Inception fraud: Incident occurred within 24 hours of policy inception with preexisting clinical records.",
+    "requires_human_review": true,
+    "evaluation_notes": "Flagged for fraudulent inception timing."
+  },
+  {
+    "claim_id": "CLM-2026-0020",
+    "claimant_id": "CUST-9830",
+    "claimant_name": "Alexander Jackson",
+    "policy_id": "POL-HLT-001",
+    "category": "Inpatient Hospitalization",
+    "claim_text": "Claimant admitted to St. Jude Hospital for 3 days due to acute viral pneumonia. Underwent IV antibiotic therapy, chest X-rays, blood cultures, and 3 nights in standard single room. Total hospital bill $3,450.",
+    "claimed_amount": 3415.5,
+    "claimed_items": [
+      {
+        "item": "Room & Board 3 days",
+        "amount": 900.0
+      },
+      {
+        "item": "Diagnostic X-rays & Blood Tests",
+        "amount": 850.0
+      },
+      {
+        "item": "Physician & Specialist Fees",
+        "amount": 700.0
+      },
+      {
+        "item": "Pharmacy & Medication",
+        "amount": 1000.0
+      }
+    ],
+    "incident_date": "2026-03-12",
+    "receipt_hash": "HASH-CLM-2026-0020-86484",
+    "expected_decision": "APPROVED",
+    "expected_cited_clauses": [
+      "Clause 1.1",
+      "Clause 1.2",
+      "Clause 1.3",
+      "Clause 3.1"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Standard covered inpatient treatment minus $250 deductible."
+  },
+  {
+    "claim_id": "CLM-2026-0021",
+    "claimant_id": "CUST-7543",
+    "claimant_name": "Isabella Davis",
+    "policy_id": "POL-HLT-001",
+    "category": "Ophthalmology / Day Care",
+    "claim_text": "Patient underwent elective phacoemulsification cataract surgery for the right eye with monofocal intraocular lens insertion at City Eye Institute. Total procedure bill is $2,100.",
+    "claimed_amount": 2268.0,
+    "claimed_items": [
+      {
+        "item": "Cataract Surgery Theatre Charges",
+        "amount": 1100.0
+      },
+      {
+        "item": "Intraocular Lens Implant",
+        "amount": 700.0
+      },
+      {
+        "item": "Surgeon Consultation",
+        "amount": 300.0
+      }
+    ],
+    "incident_date": "2026-04-05",
+    "receipt_hash": "HASH-CLM-2026-0021-28131",
+    "expected_decision": "APPROVED",
+    "expected_cited_clauses": [
+      "Clause 3.2"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Approved but capped at the $1,200 sub-limit specified in Clause 3.2."
+  },
+  {
+    "claim_id": "CLM-2026-0022",
+    "claimant_id": "CUST-9348",
+    "claimant_name": "Amelia Williams",
+    "policy_id": "POL-HLT-001",
+    "category": "Pre-Existing Exclusion",
+    "claim_text": "Claimant hospitalized for acute ischemic stroke and secondary hypertension. Medical records reveal ongoing treatment for chronic hypertension diagnosed 18 months prior to policy inception. Current policy active for 8 months.",
+    "claimed_amount": 8112.0,
+    "claimed_items": [
+      {
+        "item": "ICU Care 2 days",
+        "amount": 3200.0
+      },
+      {
+        "item": "Neurological Consultation & Medication",
+        "amount": 4600.0
+      }
+    ],
+    "incident_date": "2026-05-10",
+    "receipt_hash": "HASH-CLM-2026-0022-24371",
+    "expected_decision": "REJECTED",
+    "expected_cited_clauses": [
+      "Clause 4.1"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Pre-existing condition within 36-month exclusion waiting period."
+  },
+  {
+    "claim_id": "CLM-2026-0023",
+    "claimant_id": "CUST-3504",
+    "claimant_name": "Olivia Wilson",
+    "policy_id": "POL-HLT-001",
+    "category": "Cosmetic Exclusion",
+    "claim_text": "Patient underwent elective aesthetic rhinoplasty and septoplasty for facial aesthetic enhancement at Beverly Plastic Surgery Clinic. Total invoice $6,200.",
+    "claimed_amount": 6324.0,
+    "claimed_items": [
+      {
+        "item": "Rhinoplasty Surgical Fee",
+        "amount": 4500.0
+      },
+      {
+        "item": "Anesthesia & Facility Fee",
+        "amount": 1700.0
+      }
+    ],
+    "incident_date": "2026-06-15",
+    "receipt_hash": "HASH-CLM-2026-0023-60432",
+    "expected_decision": "REJECTED",
+    "expected_cited_clauses": [
+      "Clause 4.2"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Aesthetic and cosmetic surgeries are permanently excluded."
+  },
+  {
+    "claim_id": "CLM-2026-0024",
+    "claimant_id": "CUST-7252",
+    "claimant_name": "Evelyn Anderson",
+    "policy_id": "POL-HLT-001",
+    "category": "High Value Orthopedic",
+    "claim_text": "Total knee replacement surgery following severe osteoarthritic degradation. Implant surgery, 5 days hospital stay, physical therapy. Total claimed amount $14,500.",
+    "claimed_amount": 14500.0,
+    "claimed_items": [
+      {
+        "item": "Knee Prosthesis Implant",
+        "amount": 5500.0
+      },
+      {
+        "item": "Surgical Theatre & Surgeon Fee",
+        "amount": 5000.0
+      },
+      {
+        "item": "Room Rent & Nursing 5 days",
+        "amount": 4000.0
+      }
+    ],
+    "incident_date": "2026-07-20",
+    "receipt_hash": "HASH-CLM-2026-0024-82512",
+    "expected_decision": "ESCALATED",
+    "expected_cited_clauses": [
+      "Clause 3.3"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": true,
+    "evaluation_notes": "High value claim exceeding $10,000 threshold and subject to Joint Replacement Sub-Limit."
+  },
+  {
+    "claim_id": "CLM-2026-0025",
+    "claimant_id": "CUST-1188",
+    "claimant_name": "Sophia Moore",
+    "policy_id": "POL-HLT-002",
+    "category": "Robotic Surgery",
+    "claim_text": "Patient admitted for Da Vinci robotic-assisted laparoscopic radical prostatectomy at Metropolitan University Hospital. Incurred 2 nights in executive suite accommodation.",
+    "claimed_amount": 9568.0,
+    "claimed_items": [
+      {
+        "item": "Robotic Instrumentation Fee",
+        "amount": 3500.0
+      },
+      {
+        "item": "Surgical Team Fee",
+        "amount": 3700.0
+      },
+      {
+        "item": "Suite Room Stay",
+        "amount": 2000.0
+      }
+    ],
+    "incident_date": "2026-03-28",
+    "receipt_hash": "HASH-CLM-2026-0025-94012",
+    "expected_decision": "APPROVED",
+    "expected_cited_clauses": [
+      "Clause 1.1",
+      "Clause 1.2",
+      "Clause 3.1"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Fully covered under Gold Premier robotic surgery and suite accommodation."
+  },
+  {
+    "claim_id": "CLM-2026-0026",
+    "claimant_id": "CUST-6573",
+    "claimant_name": "Sophia Martinez",
+    "policy_id": "POL-HLT-002",
+    "category": "Mental Health",
+    "claim_text": "Inpatient admission to Horizon Behavioral Health Centre for acute major depressive disorder and psychiatric crisis stabilization for 10 days.",
+    "claimed_amount": 4158.0,
+    "claimed_items": [
+      {
+        "item": "Inpatient Psychiatric Care & Therapy",
+        "amount": 4200.0
+      }
+    ],
+    "incident_date": "2026-04-18",
+    "receipt_hash": "HASH-CLM-2026-0026-69470",
+    "expected_decision": "APPROVED",
+    "expected_cited_clauses": [
+      "Clause 2.1"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Covered within the $5,000 mental health annual aggregate limit."
+  },
+  {
+    "claim_id": "CLM-2026-0027",
+    "claimant_id": "CUST-1053",
+    "claimant_name": "Alexander Taylor",
+    "policy_id": "POL-HLT-002",
+    "category": "Experimental Therapy Exclusion",
+    "claim_text": "Claim for unapproved experimental peptide therapy and uncertified stem cell infusion administered at an offshore wellness retreat.",
+    "claimed_amount": 8840.0,
+    "claimed_items": [
+      {
+        "item": "Unapproved Experimental Stem Cell Injection",
+        "amount": 8500.0
+      }
+    ],
+    "incident_date": "2026-05-22",
+    "receipt_hash": "HASH-CLM-2026-0027-76542",
+    "expected_decision": "REJECTED",
+    "expected_cited_clauses": [
+      "Clause 4.1"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Excluded under Clause 4.1: Unproven and experimental therapies."
+  },
+  {
+    "claim_id": "CLM-2026-0028",
+    "claimant_id": "CUST-2743",
+    "claimant_name": "Mia Taylor",
+    "policy_id": "POL-MOT-001",
+    "category": "Accidental Collision",
+    "claim_text": "Insured vehicle collided with concrete guardrail during heavy rain. Front bumper shattered, radiator ruptured, hood crumpled. Vehicle towed to authorized repair centre.",
+    "claimed_amount": 2856.0,
+    "claimed_items": [
+      {
+        "item": "Front Bumper Replacement (Plastic)",
+        "amount": 800.0
+      },
+      {
+        "item": "Radiator Replacement",
+        "amount": 600.0
+      },
+      {
+        "item": "Hood Panel Beating & Paint",
+        "amount": 1400.0
+      }
+    ],
+    "incident_date": "2026-02-14",
+    "receipt_hash": "HASH-CLM-2026-0028-30032",
+    "expected_decision": "APPROVED",
+    "expected_cited_clauses": [
+      "Clause 1.1",
+      "Clause 2.1",
+      "Clause 2.2"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Standard collision covered minus $350 deductible and 50% depreciation on plastic bumper."
+  },
+  {
+    "claim_id": "CLM-2026-0029",
+    "claimant_id": "CUST-7126",
+    "claimant_name": "Olivia Moore",
+    "policy_id": "POL-MOT-001",
+    "category": "Windshield Glass",
+    "claim_text": "Gravel airborne from highway truck struck front windshield causing extensive spiderweb cracking. Replacement of original OEM laminated windshield.",
+    "claimed_amount": 802.5,
+    "claimed_items": [
+      {
+        "item": "OEM Front Glass Windshield",
+        "amount": 600.0
+      },
+      {
+        "item": "Fitting & Sensor Calibration",
+        "amount": 150.0
+      }
+    ],
+    "incident_date": "2026-03-04",
+    "receipt_hash": "HASH-CLM-2026-0029-79514",
+    "expected_decision": "APPROVED",
+    "expected_cited_clauses": [
+      "Clause 1.1",
+      "Clause 2.2"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Glass components carry 0% depreciation deduction under Clause 2.2."
+  },
+  {
+    "claim_id": "CLM-2026-0030",
+    "claimant_id": "CUST-1009",
+    "claimant_name": "Evelyn Hernandez",
+    "policy_id": "POL-MOT-001",
+    "category": "Drunk Driving Exclusion",
+    "claim_text": "Vehicle swerved into ditch at 2 AM. Police report indicates driver breathalyzer registered Blood Alcohol Concentration (BAC) of 0.14%, well above statutory 0.05% threshold.",
+    "claimed_amount": 5400.0,
+    "claimed_items": [
+      {
+        "item": "Chassis & Suspension Repair",
+        "amount": 5400.0
+      }
+    ],
+    "incident_date": "2026-04-11",
+    "receipt_hash": "HASH-CLM-2026-0030-24662",
+    "expected_decision": "REJECTED",
+    "expected_cited_clauses": [
+      "Clause 3.1"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Strictly excluded under Clause 3.1 for driving while intoxicated."
+  },
+  {
+    "claim_id": "CLM-2026-0031",
+    "claimant_id": "CUST-6947",
+    "claimant_name": "Mia Davis",
+    "policy_id": "POL-MOT-001",
+    "category": "Total Loss Burglary",
+    "claim_text": "Vehicle stolen from residential driveway overnight. Police FIR lodged immediately; vehicle unrecovered after 30 days. Insured Declared Value (IDV) is $24,000.",
+    "claimed_amount": 22320.0,
+    "claimed_items": [
+      {
+        "item": "Total Loss Vehicle IDV",
+        "amount": 24000.0
+      }
+    ],
+    "incident_date": "2026-05-01",
+    "receipt_hash": "HASH-CLM-2026-0031-84364",
+    "expected_decision": "ESCALATED",
+    "expected_cited_clauses": [
+      "Clause 1.4"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": true,
+    "evaluation_notes": "Valid total theft claim but exceeds $10k threshold, requiring senior adjuster sign-off."
+  },
+  {
+    "claim_id": "CLM-2026-0032",
+    "claimant_id": "CUST-2290",
+    "claimant_name": "Michael Thomas",
+    "policy_id": "POL-HOM-001",
+    "category": "Sudden Pipe Burst",
+    "claim_text": "Internal second-floor bathroom copper supply pipe burst suddenly due to freezing temperatures, causing ceiling collapse and structural drywall flooding into ground floor living room.",
+    "claimed_amount": 5040.0,
+    "claimed_items": [
+      {
+        "item": "Drywall and Ceiling Structural Restoration",
+        "amount": 2800.0
+      },
+      {
+        "item": "Plumbing Pipe Replacement & Testing",
+        "amount": 800.0
+      },
+      {
+        "item": "Hardwood Floor Drying & Remediation",
+        "amount": 1200.0
+      }
+    ],
+    "incident_date": "2026-01-20",
+    "receipt_hash": "HASH-CLM-2026-0032-79822",
+    "expected_decision": "APPROVED",
+    "expected_cited_clauses": [
+      "Clause 1.3",
+      "Clause 2.1"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Sudden bursting covered minus $500 property deductible."
+  },
+  {
+    "claim_id": "CLM-2026-0033",
+    "claimant_id": "CUST-3060",
+    "claimant_name": "David Thomas",
+    "policy_id": "POL-HOM-001",
+    "category": "Gradual Seepage Exclusion",
+    "claim_text": "Homeowner reported mold growth and rotting baseboards in basement. Certified building inspector concluded damage resulted from continuous rainwater capillary seepage over 2 years.",
+    "claimed_amount": 4173.0,
+    "claimed_items": [
+      {
+        "item": "Basement Mold Removal & Foundation Sealing",
+        "amount": 3900.0
+      }
+    ],
+    "incident_date": "2026-03-15",
+    "receipt_hash": "HASH-CLM-2026-0033-31643",
+    "expected_decision": "REJECTED",
+    "expected_cited_clauses": [
+      "Clause 3.1"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Gradual long-term seepage and maintenance failure excluded under Clause 3.1."
+  },
+  {
+    "claim_id": "CLM-2026-0034",
+    "claimant_id": "CUST-5342",
+    "claimant_name": "Henry Martin",
+    "policy_id": "POL-HOM-001",
+    "category": "Major Fire Damage",
+    "claim_text": "Kitchen grease fire spread to roof rafters and attic structure. Fire service response extinguished flames but upper level sustained major structural charring. Claim includes temporary rental housing.",
+    "claimed_amount": 28215.0,
+    "claimed_items": [
+      {
+        "item": "Roof & Structural Timber Rebuilding",
+        "amount": 22000.0
+      },
+      {
+        "item": "Temporary Accommodation 3 Months",
+        "amount": 6500.0
+      }
+    ],
+    "incident_date": "2026-04-02",
+    "receipt_hash": "HASH-CLM-2026-0034-37760",
+    "expected_decision": "ESCALATED",
+    "expected_cited_clauses": [
+      "Clause 1.1",
+      "Clause 2.2"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": true,
+    "evaluation_notes": "High value claim ($28.5k) routed to human adjuster for contractor quote validation."
+  },
+  {
+    "claim_id": "CLM-2026-0035",
+    "claimant_id": "CUST-9835",
+    "claimant_name": "Daniel Martinez",
+    "policy_id": "POL-HOM-002",
+    "category": "Burglary Forced Entry",
+    "claim_text": "Apartment rear patio door forced open with crowbar while tenant was at work. Burglar took 65-inch OLED television, gaming console, laptop, and leather jacket. Police evidence of jimmy marks attached.",
+    "claimed_amount": 3038.0,
+    "claimed_items": [
+      {
+        "item": "65-inch 4K OLED TV",
+        "amount": 1600.0
+      },
+      {
+        "item": "Gaming Console & Controllers",
+        "amount": 600.0
+      },
+      {
+        "item": "Laptop Computer",
+        "amount": 900.0
+      }
+    ],
+    "incident_date": "2026-05-18",
+    "receipt_hash": "HASH-CLM-2026-0035-98039",
+    "expected_decision": "APPROVED",
+    "expected_cited_clauses": [
+      "Clause 1.1",
+      "Clause 2.1",
+      "Clause 2.2"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Forcible burglary covered minus $200 deductible; items within single-item limit."
+  },
+  {
+    "claim_id": "CLM-2026-0036",
+    "claimant_id": "CUST-7118",
+    "claimant_name": "Lucas Taylor",
+    "policy_id": "POL-HOM-002",
+    "category": "Mysterious Disappearance Exclusion",
+    "claim_text": "Claimant states a gold diamond necklace disappeared from home during weekend party. No forced entry or damage to premises. Police report classifies as lost property.",
+    "claimed_amount": 3168.0,
+    "claimed_items": [
+      {
+        "item": "Gold Diamond Necklace",
+        "amount": 3200.0
+      }
+    ],
+    "incident_date": "2026-06-08",
+    "receipt_hash": "HASH-CLM-2026-0036-42493",
+    "expected_decision": "REJECTED",
+    "expected_cited_clauses": [
+      "Clause 3.1"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Mysterious disappearance and unforced loss excluded under Clause 3.1."
+  },
+  {
+    "claim_id": "CLM-2026-0037",
+    "claimant_id": "CUST-4681",
+    "claimant_name": "Michael Hernandez",
+    "policy_id": "POL-MOT-001",
+    "category": "Duplicate Invoice Fraud",
+    "claim_text": "Claim for bumper repair and paint respray following collision. Attached invoice receipt matches identical invoice number and transaction hash as claim CLM-2025-8812 submitted 3 months ago.",
+    "claimed_amount": 1794.0,
+    "claimed_items": [
+      {
+        "item": "Bumper Respray and Repair",
+        "amount": 1950.0
+      }
+    ],
+    "incident_date": "2026-06-25",
+    "receipt_hash": "DUP-HASH-99812-REPAIR",
+    "expected_decision": "ESCALATED",
+    "expected_cited_clauses": [
+      "Clause 1.1"
+    ],
+    "is_fraud": true,
+    "fraud_reason": "Duplicate invoice hash detected across previous claims database.",
+    "requires_human_review": true,
+    "evaluation_notes": "Flagged by fraud guard and escalated to SIU (Special Investigation Unit)."
+  },
+  {
+    "claim_id": "CLM-2026-0038",
+    "claimant_id": "CUST-4770",
+    "claimant_name": "Sebastian Davis",
+    "policy_id": "POL-HLT-001",
+    "category": "Inception Fraud",
+    "claim_text": "Policy activated on May 10, 2026. Claim filed on May 12, 2026 for extensive multi-week lumbar spine treatment with doctor notes dating back to April 2026 prior to policy bound date.",
+    "claimed_amount": 3956.0,
+    "claimed_items": [
+      {
+        "item": "Spinal Therapy & Injections",
+        "amount": 4300.0
+      }
+    ],
+    "incident_date": "2026-05-11",
+    "receipt_hash": null,
+    "expected_decision": "ESCALATED",
+    "expected_cited_clauses": [
+      "Clause 4.1"
+    ],
+    "is_fraud": true,
+    "fraud_reason": "Inception fraud: Incident occurred within 24 hours of policy inception with preexisting clinical records.",
+    "requires_human_review": true,
+    "evaluation_notes": "Flagged for fraudulent inception timing."
+  },
+  {
+    "claim_id": "CLM-2026-0039",
+    "claimant_id": "CUST-1964",
+    "claimant_name": "Ava Williams",
+    "policy_id": "POL-HLT-001",
+    "category": "Inpatient Hospitalization",
+    "claim_text": "Claimant admitted to St. Jude Hospital for 3 days due to acute viral pneumonia. Underwent IV antibiotic therapy, chest X-rays, blood cultures, and 3 nights in standard single room. Total hospital bill $3,450.",
+    "claimed_amount": 3657.0,
+    "claimed_items": [
+      {
+        "item": "Room & Board 3 days",
+        "amount": 900.0
+      },
+      {
+        "item": "Diagnostic X-rays & Blood Tests",
+        "amount": 850.0
+      },
+      {
+        "item": "Physician & Specialist Fees",
+        "amount": 700.0
+      },
+      {
+        "item": "Pharmacy & Medication",
+        "amount": 1000.0
+      }
+    ],
+    "incident_date": "2026-03-12",
+    "receipt_hash": "HASH-CLM-2026-0039-53309",
+    "expected_decision": "APPROVED",
+    "expected_cited_clauses": [
+      "Clause 1.1",
+      "Clause 1.2",
+      "Clause 1.3",
+      "Clause 3.1"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Standard covered inpatient treatment minus $250 deductible."
+  },
+  {
+    "claim_id": "CLM-2026-0040",
+    "claimant_id": "CUST-2160",
+    "claimant_name": "Henry Davis",
+    "policy_id": "POL-HLT-001",
+    "category": "Ophthalmology / Day Care",
+    "claim_text": "Patient underwent elective phacoemulsification cataract surgery for the right eye with monofocal intraocular lens insertion at City Eye Institute. Total procedure bill is $2,100.",
+    "claimed_amount": 2016.0,
+    "claimed_items": [
+      {
+        "item": "Cataract Surgery Theatre Charges",
+        "amount": 1100.0
+      },
+      {
+        "item": "Intraocular Lens Implant",
+        "amount": 700.0
+      },
+      {
+        "item": "Surgeon Consultation",
+        "amount": 300.0
+      }
+    ],
+    "incident_date": "2026-04-05",
+    "receipt_hash": "HASH-CLM-2026-0040-73624",
+    "expected_decision": "APPROVED",
+    "expected_cited_clauses": [
+      "Clause 3.2"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Approved but capped at the $1,200 sub-limit specified in Clause 3.2."
+  },
+  {
+    "claim_id": "CLM-2026-0041",
+    "claimant_id": "CUST-4510",
+    "claimant_name": "Harper Jones",
+    "policy_id": "POL-HLT-001",
+    "category": "Pre-Existing Exclusion",
+    "claim_text": "Claimant hospitalized for acute ischemic stroke and secondary hypertension. Medical records reveal ongoing treatment for chronic hypertension diagnosed 18 months prior to policy inception. Current policy active for 8 months.",
+    "claimed_amount": 8112.0,
+    "claimed_items": [
+      {
+        "item": "ICU Care 2 days",
+        "amount": 3200.0
+      },
+      {
+        "item": "Neurological Consultation & Medication",
+        "amount": 4600.0
+      }
+    ],
+    "incident_date": "2026-05-10",
+    "receipt_hash": "HASH-CLM-2026-0041-84847",
+    "expected_decision": "REJECTED",
+    "expected_cited_clauses": [
+      "Clause 4.1"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Pre-existing condition within 36-month exclusion waiting period."
+  },
+  {
+    "claim_id": "CLM-2026-0042",
+    "claimant_id": "CUST-8744",
+    "claimant_name": "Ava Thomas",
+    "policy_id": "POL-HLT-001",
+    "category": "Cosmetic Exclusion",
+    "claim_text": "Patient underwent elective aesthetic rhinoplasty and septoplasty for facial aesthetic enhancement at Beverly Plastic Surgery Clinic. Total invoice $6,200.",
+    "claimed_amount": 6510.0,
+    "claimed_items": [
+      {
+        "item": "Rhinoplasty Surgical Fee",
+        "amount": 4500.0
+      },
+      {
+        "item": "Anesthesia & Facility Fee",
+        "amount": 1700.0
+      }
+    ],
+    "incident_date": "2026-06-15",
+    "receipt_hash": "HASH-CLM-2026-0042-34957",
+    "expected_decision": "REJECTED",
+    "expected_cited_clauses": [
+      "Clause 4.2"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Aesthetic and cosmetic surgeries are permanently excluded."
+  },
+  {
+    "claim_id": "CLM-2026-0043",
+    "claimant_id": "CUST-2545",
+    "claimant_name": "Sophia Wilson",
+    "policy_id": "POL-HLT-001",
+    "category": "High Value Orthopedic",
+    "claim_text": "Total knee replacement surgery following severe osteoarthritic degradation. Implant surgery, 5 days hospital stay, physical therapy. Total claimed amount $14,500.",
+    "claimed_amount": 14210.0,
+    "claimed_items": [
+      {
+        "item": "Knee Prosthesis Implant",
+        "amount": 5500.0
+      },
+      {
+        "item": "Surgical Theatre & Surgeon Fee",
+        "amount": 5000.0
+      },
+      {
+        "item": "Room Rent & Nursing 5 days",
+        "amount": 4000.0
+      }
+    ],
+    "incident_date": "2026-07-20",
+    "receipt_hash": "HASH-CLM-2026-0043-63883",
+    "expected_decision": "ESCALATED",
+    "expected_cited_clauses": [
+      "Clause 3.3"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": true,
+    "evaluation_notes": "High value claim exceeding $10,000 threshold and subject to Joint Replacement Sub-Limit."
+  },
+  {
+    "claim_id": "CLM-2026-0044",
+    "claimant_id": "CUST-8651",
+    "claimant_name": "Emma Brown",
+    "policy_id": "POL-HLT-002",
+    "category": "Robotic Surgery",
+    "claim_text": "Patient admitted for Da Vinci robotic-assisted laparoscopic radical prostatectomy at Metropolitan University Hospital. Incurred 2 nights in executive suite accommodation.",
+    "claimed_amount": 8556.0,
+    "claimed_items": [
+      {
+        "item": "Robotic Instrumentation Fee",
+        "amount": 3500.0
+      },
+      {
+        "item": "Surgical Team Fee",
+        "amount": 3700.0
+      },
+      {
+        "item": "Suite Room Stay",
+        "amount": 2000.0
+      }
+    ],
+    "incident_date": "2026-03-28",
+    "receipt_hash": "HASH-CLM-2026-0044-54473",
+    "expected_decision": "APPROVED",
+    "expected_cited_clauses": [
+      "Clause 1.1",
+      "Clause 1.2",
+      "Clause 3.1"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Fully covered under Gold Premier robotic surgery and suite accommodation."
+  },
+  {
+    "claim_id": "CLM-2026-0045",
+    "claimant_id": "CUST-2790",
+    "claimant_name": "Ava Miller",
+    "policy_id": "POL-HLT-002",
+    "category": "Mental Health",
+    "claim_text": "Inpatient admission to Horizon Behavioral Health Centre for acute major depressive disorder and psychiatric crisis stabilization for 10 days.",
+    "claimed_amount": 3990.0,
+    "claimed_items": [
+      {
+        "item": "Inpatient Psychiatric Care & Therapy",
+        "amount": 4200.0
+      }
+    ],
+    "incident_date": "2026-04-18",
+    "receipt_hash": "HASH-CLM-2026-0045-68800",
+    "expected_decision": "APPROVED",
+    "expected_cited_clauses": [
+      "Clause 2.1"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Covered within the $5,000 mental health annual aggregate limit."
+  },
+  {
+    "claim_id": "CLM-2026-0046",
+    "claimant_id": "CUST-3296",
+    "claimant_name": "Charlotte Garcia",
+    "policy_id": "POL-HLT-002",
+    "category": "Experimental Therapy Exclusion",
+    "claim_text": "Claim for unapproved experimental peptide therapy and uncertified stem cell infusion administered at an offshore wellness retreat.",
+    "claimed_amount": 8160.0,
+    "claimed_items": [
+      {
+        "item": "Unapproved Experimental Stem Cell Injection",
+        "amount": 8500.0
+      }
+    ],
+    "incident_date": "2026-05-22",
+    "receipt_hash": "HASH-CLM-2026-0046-42742",
+    "expected_decision": "REJECTED",
+    "expected_cited_clauses": [
+      "Clause 4.1"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Excluded under Clause 4.1: Unproven and experimental therapies."
+  },
+  {
+    "claim_id": "CLM-2026-0047",
+    "claimant_id": "CUST-2235",
+    "claimant_name": "Lucas Moore",
+    "policy_id": "POL-MOT-001",
+    "category": "Accidental Collision",
+    "claim_text": "Insured vehicle collided with concrete guardrail during heavy rain. Front bumper shattered, radiator ruptured, hood crumpled. Vehicle towed to authorized repair centre.",
+    "claimed_amount": 2632.0,
+    "claimed_items": [
+      {
+        "item": "Front Bumper Replacement (Plastic)",
+        "amount": 800.0
+      },
+      {
+        "item": "Radiator Replacement",
+        "amount": 600.0
+      },
+      {
+        "item": "Hood Panel Beating & Paint",
+        "amount": 1400.0
+      }
+    ],
+    "incident_date": "2026-02-14",
+    "receipt_hash": "HASH-CLM-2026-0047-95477",
+    "expected_decision": "APPROVED",
+    "expected_cited_clauses": [
+      "Clause 1.1",
+      "Clause 2.1",
+      "Clause 2.2"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Standard collision covered minus $350 deductible and 50% depreciation on plastic bumper."
+  },
+  {
+    "claim_id": "CLM-2026-0048",
+    "claimant_id": "CUST-9856",
+    "claimant_name": "James Williams",
+    "policy_id": "POL-MOT-001",
+    "category": "Windshield Glass",
+    "claim_text": "Gravel airborne from highway truck struck front windshield causing extensive spiderweb cracking. Replacement of original OEM laminated windshield.",
+    "claimed_amount": 802.5,
+    "claimed_items": [
+      {
+        "item": "OEM Front Glass Windshield",
+        "amount": 600.0
+      },
+      {
+        "item": "Fitting & Sensor Calibration",
+        "amount": 150.0
+      }
+    ],
+    "incident_date": "2026-03-04",
+    "receipt_hash": "HASH-CLM-2026-0048-40982",
+    "expected_decision": "APPROVED",
+    "expected_cited_clauses": [
+      "Clause 1.1",
+      "Clause 2.2"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Glass components carry 0% depreciation deduction under Clause 2.2."
+  },
+  {
+    "claim_id": "CLM-2026-0049",
+    "claimant_id": "CUST-3724",
+    "claimant_name": "Charlotte Thomas",
+    "policy_id": "POL-MOT-001",
+    "category": "Drunk Driving Exclusion",
+    "claim_text": "Vehicle swerved into ditch at 2 AM. Police report indicates driver breathalyzer registered Blood Alcohol Concentration (BAC) of 0.14%, well above statutory 0.05% threshold.",
+    "claimed_amount": 5400.0,
+    "claimed_items": [
+      {
+        "item": "Chassis & Suspension Repair",
+        "amount": 5400.0
+      }
+    ],
+    "incident_date": "2026-04-11",
+    "receipt_hash": "HASH-CLM-2026-0049-62565",
+    "expected_decision": "REJECTED",
+    "expected_cited_clauses": [
+      "Clause 3.1"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Strictly excluded under Clause 3.1 for driving while intoxicated."
+  },
+  {
+    "claim_id": "CLM-2026-0050",
+    "claimant_id": "CUST-1960",
+    "claimant_name": "Olivia Gonzalez",
+    "policy_id": "POL-MOT-001",
+    "category": "Total Loss Burglary",
+    "claim_text": "Vehicle stolen from residential driveway overnight. Police FIR lodged immediately; vehicle unrecovered after 30 days. Insured Declared Value (IDV) is $24,000.",
+    "claimed_amount": 22080.0,
+    "claimed_items": [
+      {
+        "item": "Total Loss Vehicle IDV",
+        "amount": 24000.0
+      }
+    ],
+    "incident_date": "2026-05-01",
+    "receipt_hash": "HASH-CLM-2026-0050-61173",
+    "expected_decision": "ESCALATED",
+    "expected_cited_clauses": [
+      "Clause 1.4"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": true,
+    "evaluation_notes": "Valid total theft claim but exceeds $10k threshold, requiring senior adjuster sign-off."
+  },
+  {
+    "claim_id": "CLM-2026-0051",
+    "claimant_id": "CUST-5345",
+    "claimant_name": "Lucas Martinez",
+    "policy_id": "POL-HOM-001",
+    "category": "Sudden Pipe Burst",
+    "claim_text": "Internal second-floor bathroom copper supply pipe burst suddenly due to freezing temperatures, causing ceiling collapse and structural drywall flooding into ground floor living room.",
+    "claimed_amount": 4752.0,
+    "claimed_items": [
+      {
+        "item": "Drywall and Ceiling Structural Restoration",
+        "amount": 2800.0
+      },
+      {
+        "item": "Plumbing Pipe Replacement & Testing",
+        "amount": 800.0
+      },
+      {
+        "item": "Hardwood Floor Drying & Remediation",
+        "amount": 1200.0
+      }
+    ],
+    "incident_date": "2026-01-20",
+    "receipt_hash": "HASH-CLM-2026-0051-82845",
+    "expected_decision": "APPROVED",
+    "expected_cited_clauses": [
+      "Clause 1.3",
+      "Clause 2.1"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Sudden bursting covered minus $500 property deductible."
+  },
+  {
+    "claim_id": "CLM-2026-0052",
+    "claimant_id": "CUST-8973",
+    "claimant_name": "David Miller",
+    "policy_id": "POL-HOM-001",
+    "category": "Gradual Seepage Exclusion",
+    "claim_text": "Homeowner reported mold growth and rotting baseboards in basement. Certified building inspector concluded damage resulted from continuous rainwater capillary seepage over 2 years.",
+    "claimed_amount": 3783.0,
+    "claimed_items": [
+      {
+        "item": "Basement Mold Removal & Foundation Sealing",
+        "amount": 3900.0
+      }
+    ],
+    "incident_date": "2026-03-15",
+    "receipt_hash": "HASH-CLM-2026-0052-17665",
+    "expected_decision": "REJECTED",
+    "expected_cited_clauses": [
+      "Clause 3.1"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Gradual long-term seepage and maintenance failure excluded under Clause 3.1."
+  },
+  {
+    "claim_id": "CLM-2026-0053",
+    "claimant_id": "CUST-9883",
+    "claimant_name": "Emma Hernandez",
+    "policy_id": "POL-HOM-001",
+    "category": "Major Fire Damage",
+    "claim_text": "Kitchen grease fire spread to roof rafters and attic structure. Fire service response extinguished flames but upper level sustained major structural charring. Claim includes temporary rental housing.",
+    "claimed_amount": 26505.0,
+    "claimed_items": [
+      {
+        "item": "Roof & Structural Timber Rebuilding",
+        "amount": 22000.0
+      },
+      {
+        "item": "Temporary Accommodation 3 Months",
+        "amount": 6500.0
+      }
+    ],
+    "incident_date": "2026-04-02",
+    "receipt_hash": "HASH-CLM-2026-0053-86569",
+    "expected_decision": "ESCALATED",
+    "expected_cited_clauses": [
+      "Clause 1.1",
+      "Clause 2.2"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": true,
+    "evaluation_notes": "High value claim ($28.5k) routed to human adjuster for contractor quote validation."
+  },
+  {
+    "claim_id": "CLM-2026-0054",
+    "claimant_id": "CUST-8811",
+    "claimant_name": "Henry Taylor",
+    "policy_id": "POL-HOM-002",
+    "category": "Burglary Forced Entry",
+    "claim_text": "Apartment rear patio door forced open with crowbar while tenant was at work. Burglar took 65-inch OLED television, gaming console, laptop, and leather jacket. Police evidence of jimmy marks attached.",
+    "claimed_amount": 2945.0,
+    "claimed_items": [
+      {
+        "item": "65-inch 4K OLED TV",
+        "amount": 1600.0
+      },
+      {
+        "item": "Gaming Console & Controllers",
+        "amount": 600.0
+      },
+      {
+        "item": "Laptop Computer",
+        "amount": 900.0
+      }
+    ],
+    "incident_date": "2026-05-18",
+    "receipt_hash": "HASH-CLM-2026-0054-76562",
+    "expected_decision": "APPROVED",
+    "expected_cited_clauses": [
+      "Clause 1.1",
+      "Clause 2.1",
+      "Clause 2.2"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Forcible burglary covered minus $200 deductible; items within single-item limit."
+  },
+  {
+    "claim_id": "CLM-2026-0055",
+    "claimant_id": "CUST-2312",
+    "claimant_name": "Olivia Williams",
+    "policy_id": "POL-HOM-002",
+    "category": "Mysterious Disappearance Exclusion",
+    "claim_text": "Claimant states a gold diamond necklace disappeared from home during weekend party. No forced entry or damage to premises. Police report classifies as lost property.",
+    "claimed_amount": 3264.0,
+    "claimed_items": [
+      {
+        "item": "Gold Diamond Necklace",
+        "amount": 3200.0
+      }
+    ],
+    "incident_date": "2026-06-08",
+    "receipt_hash": "HASH-CLM-2026-0055-98501",
+    "expected_decision": "REJECTED",
+    "expected_cited_clauses": [
+      "Clause 3.1"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Mysterious disappearance and unforced loss excluded under Clause 3.1."
+  },
+  {
+    "claim_id": "CLM-2026-0056",
+    "claimant_id": "CUST-4853",
+    "claimant_name": "Benjamin Brown",
+    "policy_id": "POL-MOT-001",
+    "category": "Duplicate Invoice Fraud",
+    "claim_text": "Claim for bumper repair and paint respray following collision. Attached invoice receipt matches identical invoice number and transaction hash as claim CLM-2025-8812 submitted 3 months ago.",
+    "claimed_amount": 2086.5,
+    "claimed_items": [
+      {
+        "item": "Bumper Respray and Repair",
+        "amount": 1950.0
+      }
+    ],
+    "incident_date": "2026-06-25",
+    "receipt_hash": "DUP-HASH-99812-REPAIR",
+    "expected_decision": "ESCALATED",
+    "expected_cited_clauses": [
+      "Clause 1.1"
+    ],
+    "is_fraud": true,
+    "fraud_reason": "Duplicate invoice hash detected across previous claims database.",
+    "requires_human_review": true,
+    "evaluation_notes": "Flagged by fraud guard and escalated to SIU (Special Investigation Unit)."
+  },
+  {
+    "claim_id": "CLM-2026-0057",
+    "claimant_id": "CUST-5033",
+    "claimant_name": "Sebastian Martin",
+    "policy_id": "POL-HLT-001",
+    "category": "Inception Fraud",
+    "claim_text": "Policy activated on May 10, 2026. Claim filed on May 12, 2026 for extensive multi-week lumbar spine treatment with doctor notes dating back to April 2026 prior to policy bound date.",
+    "claimed_amount": 3999.0,
+    "claimed_items": [
+      {
+        "item": "Spinal Therapy & Injections",
+        "amount": 4300.0
+      }
+    ],
+    "incident_date": "2026-05-11",
+    "receipt_hash": null,
+    "expected_decision": "ESCALATED",
+    "expected_cited_clauses": [
+      "Clause 4.1"
+    ],
+    "is_fraud": true,
+    "fraud_reason": "Inception fraud: Incident occurred within 24 hours of policy inception with preexisting clinical records.",
+    "requires_human_review": true,
+    "evaluation_notes": "Flagged for fraudulent inception timing."
+  },
+  {
+    "claim_id": "CLM-2026-0058",
+    "claimant_id": "CUST-2343",
+    "claimant_name": "Charlotte Jackson",
+    "policy_id": "POL-HLT-001",
+    "category": "Inpatient Hospitalization",
+    "claim_text": "Claimant admitted to St. Jude Hospital for 3 days due to acute viral pneumonia. Underwent IV antibiotic therapy, chest X-rays, blood cultures, and 3 nights in standard single room. Total hospital bill $3,450.",
+    "claimed_amount": 3484.5,
+    "claimed_items": [
+      {
+        "item": "Room & Board 3 days",
+        "amount": 900.0
+      },
+      {
+        "item": "Diagnostic X-rays & Blood Tests",
+        "amount": 850.0
+      },
+      {
+        "item": "Physician & Specialist Fees",
+        "amount": 700.0
+      },
+      {
+        "item": "Pharmacy & Medication",
+        "amount": 1000.0
+      }
+    ],
+    "incident_date": "2026-03-12",
+    "receipt_hash": "HASH-CLM-2026-0058-51467",
+    "expected_decision": "APPROVED",
+    "expected_cited_clauses": [
+      "Clause 1.1",
+      "Clause 1.2",
+      "Clause 1.3",
+      "Clause 3.1"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Standard covered inpatient treatment minus $250 deductible."
+  },
+  {
+    "claim_id": "CLM-2026-0059",
+    "claimant_id": "CUST-5272",
+    "claimant_name": "Daniel Hernandez",
+    "policy_id": "POL-HLT-001",
+    "category": "Ophthalmology / Day Care",
+    "claim_text": "Patient underwent elective phacoemulsification cataract surgery for the right eye with monofocal intraocular lens insertion at City Eye Institute. Total procedure bill is $2,100.",
+    "claimed_amount": 2016.0,
+    "claimed_items": [
+      {
+        "item": "Cataract Surgery Theatre Charges",
+        "amount": 1100.0
+      },
+      {
+        "item": "Intraocular Lens Implant",
+        "amount": 700.0
+      },
+      {
+        "item": "Surgeon Consultation",
+        "amount": 300.0
+      }
+    ],
+    "incident_date": "2026-04-05",
+    "receipt_hash": "HASH-CLM-2026-0059-61876",
+    "expected_decision": "APPROVED",
+    "expected_cited_clauses": [
+      "Clause 3.2"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Approved but capped at the $1,200 sub-limit specified in Clause 3.2."
+  },
+  {
+    "claim_id": "CLM-2026-0060",
+    "claimant_id": "CUST-3144",
+    "claimant_name": "Mia Anderson",
+    "policy_id": "POL-HLT-001",
+    "category": "Pre-Existing Exclusion",
+    "claim_text": "Claimant hospitalized for acute ischemic stroke and secondary hypertension. Medical records reveal ongoing treatment for chronic hypertension diagnosed 18 months prior to policy inception. Current policy active for 8 months.",
+    "claimed_amount": 7566.0,
+    "claimed_items": [
+      {
+        "item": "ICU Care 2 days",
+        "amount": 3200.0
+      },
+      {
+        "item": "Neurological Consultation & Medication",
+        "amount": 4600.0
+      }
+    ],
+    "incident_date": "2026-05-10",
+    "receipt_hash": "HASH-CLM-2026-0060-19508",
+    "expected_decision": "REJECTED",
+    "expected_cited_clauses": [
+      "Clause 4.1"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Pre-existing condition within 36-month exclusion waiting period."
+  },
+  {
+    "claim_id": "CLM-2026-0061",
+    "claimant_id": "CUST-1152",
+    "claimant_name": "Lucas Martin",
+    "policy_id": "POL-HLT-001",
+    "category": "Cosmetic Exclusion",
+    "claim_text": "Patient underwent elective aesthetic rhinoplasty and septoplasty for facial aesthetic enhancement at Beverly Plastic Surgery Clinic. Total invoice $6,200.",
+    "claimed_amount": 6696.0,
+    "claimed_items": [
+      {
+        "item": "Rhinoplasty Surgical Fee",
+        "amount": 4500.0
+      },
+      {
+        "item": "Anesthesia & Facility Fee",
+        "amount": 1700.0
+      }
+    ],
+    "incident_date": "2026-06-15",
+    "receipt_hash": "HASH-CLM-2026-0061-23104",
+    "expected_decision": "REJECTED",
+    "expected_cited_clauses": [
+      "Clause 4.2"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Aesthetic and cosmetic surgeries are permanently excluded."
+  },
+  {
+    "claim_id": "CLM-2026-0062",
+    "claimant_id": "CUST-2200",
+    "claimant_name": "Harper Miller",
+    "policy_id": "POL-HLT-001",
+    "category": "High Value Orthopedic",
+    "claim_text": "Total knee replacement surgery following severe osteoarthritic degradation. Implant surgery, 5 days hospital stay, physical therapy. Total claimed amount $14,500.",
+    "claimed_amount": 14500.0,
+    "claimed_items": [
+      {
+        "item": "Knee Prosthesis Implant",
+        "amount": 5500.0
+      },
+      {
+        "item": "Surgical Theatre & Surgeon Fee",
+        "amount": 5000.0
+      },
+      {
+        "item": "Room Rent & Nursing 5 days",
+        "amount": 4000.0
+      }
+    ],
+    "incident_date": "2026-07-20",
+    "receipt_hash": "HASH-CLM-2026-0062-27361",
+    "expected_decision": "ESCALATED",
+    "expected_cited_clauses": [
+      "Clause 3.3"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": true,
+    "evaluation_notes": "High value claim exceeding $10,000 threshold and subject to Joint Replacement Sub-Limit."
+  },
+  {
+    "claim_id": "CLM-2026-0063",
+    "claimant_id": "CUST-6718",
+    "claimant_name": "Michael Davis",
+    "policy_id": "POL-HLT-002",
+    "category": "Robotic Surgery",
+    "claim_text": "Patient admitted for Da Vinci robotic-assisted laparoscopic radical prostatectomy at Metropolitan University Hospital. Incurred 2 nights in executive suite accommodation.",
+    "claimed_amount": 9016.0,
+    "claimed_items": [
+      {
+        "item": "Robotic Instrumentation Fee",
+        "amount": 3500.0
+      },
+      {
+        "item": "Surgical Team Fee",
+        "amount": 3700.0
+      },
+      {
+        "item": "Suite Room Stay",
+        "amount": 2000.0
+      }
+    ],
+    "incident_date": "2026-03-28",
+    "receipt_hash": "HASH-CLM-2026-0063-30676",
+    "expected_decision": "APPROVED",
+    "expected_cited_clauses": [
+      "Clause 1.1",
+      "Clause 1.2",
+      "Clause 3.1"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Fully covered under Gold Premier robotic surgery and suite accommodation."
+  },
+  {
+    "claim_id": "CLM-2026-0064",
+    "claimant_id": "CUST-8179",
+    "claimant_name": "Harper Martinez",
+    "policy_id": "POL-HLT-002",
+    "category": "Mental Health",
+    "claim_text": "Inpatient admission to Horizon Behavioral Health Centre for acute major depressive disorder and psychiatric crisis stabilization for 10 days.",
+    "claimed_amount": 4284.0,
+    "claimed_items": [
+      {
+        "item": "Inpatient Psychiatric Care & Therapy",
+        "amount": 4200.0
+      }
+    ],
+    "incident_date": "2026-04-18",
+    "receipt_hash": "HASH-CLM-2026-0064-95717",
+    "expected_decision": "APPROVED",
+    "expected_cited_clauses": [
+      "Clause 2.1"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Covered within the $5,000 mental health annual aggregate limit."
+  },
+  {
+    "claim_id": "CLM-2026-0065",
+    "claimant_id": "CUST-9666",
+    "claimant_name": "James Moore",
+    "policy_id": "POL-HLT-002",
+    "category": "Experimental Therapy Exclusion",
+    "claim_text": "Claim for unapproved experimental peptide therapy and uncertified stem cell infusion administered at an offshore wellness retreat.",
+    "claimed_amount": 8245.0,
+    "claimed_items": [
+      {
+        "item": "Unapproved Experimental Stem Cell Injection",
+        "amount": 8500.0
+      }
+    ],
+    "incident_date": "2026-05-22",
+    "receipt_hash": "HASH-CLM-2026-0065-96951",
+    "expected_decision": "REJECTED",
+    "expected_cited_clauses": [
+      "Clause 4.1"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Excluded under Clause 4.1: Unproven and experimental therapies."
+  },
+  {
+    "claim_id": "CLM-2026-0066",
+    "claimant_id": "CUST-2697",
+    "claimant_name": "David Rodriguez",
+    "policy_id": "POL-MOT-001",
+    "category": "Accidental Collision",
+    "claim_text": "Insured vehicle collided with concrete guardrail during heavy rain. Front bumper shattered, radiator ruptured, hood crumpled. Vehicle towed to authorized repair centre.",
+    "claimed_amount": 2632.0,
+    "claimed_items": [
+      {
+        "item": "Front Bumper Replacement (Plastic)",
+        "amount": 800.0
+      },
+      {
+        "item": "Radiator Replacement",
+        "amount": 600.0
+      },
+      {
+        "item": "Hood Panel Beating & Paint",
+        "amount": 1400.0
+      }
+    ],
+    "incident_date": "2026-02-14",
+    "receipt_hash": "HASH-CLM-2026-0066-24029",
+    "expected_decision": "APPROVED",
+    "expected_cited_clauses": [
+      "Clause 1.1",
+      "Clause 2.1",
+      "Clause 2.2"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Standard collision covered minus $350 deductible and 50% depreciation on plastic bumper."
+  },
+  {
+    "claim_id": "CLM-2026-0067",
+    "claimant_id": "CUST-3546",
+    "claimant_name": "Alexander Martinez",
+    "policy_id": "POL-MOT-001",
+    "category": "Windshield Glass",
+    "claim_text": "Gravel airborne from highway truck struck front windshield causing extensive spiderweb cracking. Replacement of original OEM laminated windshield.",
+    "claimed_amount": 765.0,
+    "claimed_items": [
+      {
+        "item": "OEM Front Glass Windshield",
+        "amount": 600.0
+      },
+      {
+        "item": "Fitting & Sensor Calibration",
+        "amount": 150.0
+      }
+    ],
+    "incident_date": "2026-03-04",
+    "receipt_hash": "HASH-CLM-2026-0067-54942",
+    "expected_decision": "APPROVED",
+    "expected_cited_clauses": [
+      "Clause 1.1",
+      "Clause 2.2"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Glass components carry 0% depreciation deduction under Clause 2.2."
+  },
+  {
+    "claim_id": "CLM-2026-0068",
+    "claimant_id": "CUST-4335",
+    "claimant_name": "Alexander Taylor",
+    "policy_id": "POL-MOT-001",
+    "category": "Drunk Driving Exclusion",
+    "claim_text": "Vehicle swerved into ditch at 2 AM. Police report indicates driver breathalyzer registered Blood Alcohol Concentration (BAC) of 0.14%, well above statutory 0.05% threshold.",
+    "claimed_amount": 5400.0,
+    "claimed_items": [
+      {
+        "item": "Chassis & Suspension Repair",
+        "amount": 5400.0
+      }
+    ],
+    "incident_date": "2026-04-11",
+    "receipt_hash": "HASH-CLM-2026-0068-16658",
+    "expected_decision": "REJECTED",
+    "expected_cited_clauses": [
+      "Clause 3.1"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Strictly excluded under Clause 3.1 for driving while intoxicated."
+  },
+  {
+    "claim_id": "CLM-2026-0069",
+    "claimant_id": "CUST-2512",
+    "claimant_name": "Charlotte Rodriguez",
+    "policy_id": "POL-MOT-001",
+    "category": "Total Loss Burglary",
+    "claim_text": "Vehicle stolen from residential driveway overnight. Police FIR lodged immediately; vehicle unrecovered after 30 days. Insured Declared Value (IDV) is $24,000.",
+    "claimed_amount": 22320.0,
+    "claimed_items": [
+      {
+        "item": "Total Loss Vehicle IDV",
+        "amount": 24000.0
+      }
+    ],
+    "incident_date": "2026-05-01",
+    "receipt_hash": "HASH-CLM-2026-0069-53719",
+    "expected_decision": "ESCALATED",
+    "expected_cited_clauses": [
+      "Clause 1.4"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": true,
+    "evaluation_notes": "Valid total theft claim but exceeds $10k threshold, requiring senior adjuster sign-off."
+  },
+  {
+    "claim_id": "CLM-2026-0070",
+    "claimant_id": "CUST-3143",
+    "claimant_name": "Alexander Garcia",
+    "policy_id": "POL-HOM-001",
+    "category": "Sudden Pipe Burst",
+    "claim_text": "Internal second-floor bathroom copper supply pipe burst suddenly due to freezing temperatures, causing ceiling collapse and structural drywall flooding into ground floor living room.",
+    "claimed_amount": 4992.0,
+    "claimed_items": [
+      {
+        "item": "Drywall and Ceiling Structural Restoration",
+        "amount": 2800.0
+      },
+      {
+        "item": "Plumbing Pipe Replacement & Testing",
+        "amount": 800.0
+      },
+      {
+        "item": "Hardwood Floor Drying & Remediation",
+        "amount": 1200.0
+      }
+    ],
+    "incident_date": "2026-01-20",
+    "receipt_hash": "HASH-CLM-2026-0070-82309",
+    "expected_decision": "APPROVED",
+    "expected_cited_clauses": [
+      "Clause 1.3",
+      "Clause 2.1"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Sudden bursting covered minus $500 property deductible."
+  },
+  {
+    "claim_id": "CLM-2026-0071",
+    "claimant_id": "CUST-8007",
+    "claimant_name": "Harper Smith",
+    "policy_id": "POL-HOM-001",
+    "category": "Gradual Seepage Exclusion",
+    "claim_text": "Homeowner reported mold growth and rotting baseboards in basement. Certified building inspector concluded damage resulted from continuous rainwater capillary seepage over 2 years.",
+    "claimed_amount": 3666.0,
+    "claimed_items": [
+      {
+        "item": "Basement Mold Removal & Foundation Sealing",
+        "amount": 3900.0
+      }
+    ],
+    "incident_date": "2026-03-15",
+    "receipt_hash": "HASH-CLM-2026-0071-29536",
+    "expected_decision": "REJECTED",
+    "expected_cited_clauses": [
+      "Clause 3.1"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Gradual long-term seepage and maintenance failure excluded under Clause 3.1."
+  },
+  {
+    "claim_id": "CLM-2026-0072",
+    "claimant_id": "CUST-9938",
+    "claimant_name": "Emma Lopez",
+    "policy_id": "POL-HOM-001",
+    "category": "Major Fire Damage",
+    "claim_text": "Kitchen grease fire spread to roof rafters and attic structure. Fire service response extinguished flames but upper level sustained major structural charring. Claim includes temporary rental housing.",
+    "claimed_amount": 28785.0,
+    "claimed_items": [
+      {
+        "item": "Roof & Structural Timber Rebuilding",
+        "amount": 22000.0
+      },
+      {
+        "item": "Temporary Accommodation 3 Months",
+        "amount": 6500.0
+      }
+    ],
+    "incident_date": "2026-04-02",
+    "receipt_hash": "HASH-CLM-2026-0072-29410",
+    "expected_decision": "ESCALATED",
+    "expected_cited_clauses": [
+      "Clause 1.1",
+      "Clause 2.2"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": true,
+    "evaluation_notes": "High value claim ($28.5k) routed to human adjuster for contractor quote validation."
+  },
+  {
+    "claim_id": "CLM-2026-0073",
+    "claimant_id": "CUST-8041",
+    "claimant_name": "David Johnson",
+    "policy_id": "POL-HOM-002",
+    "category": "Burglary Forced Entry",
+    "claim_text": "Apartment rear patio door forced open with crowbar while tenant was at work. Burglar took 65-inch OLED television, gaming console, laptop, and leather jacket. Police evidence of jimmy marks attached.",
+    "claimed_amount": 3007.0,
+    "claimed_items": [
+      {
+        "item": "65-inch 4K OLED TV",
+        "amount": 1600.0
+      },
+      {
+        "item": "Gaming Console & Controllers",
+        "amount": 600.0
+      },
+      {
+        "item": "Laptop Computer",
+        "amount": 900.0
+      }
+    ],
+    "incident_date": "2026-05-18",
+    "receipt_hash": "HASH-CLM-2026-0073-15229",
+    "expected_decision": "APPROVED",
+    "expected_cited_clauses": [
+      "Clause 1.1",
+      "Clause 2.1",
+      "Clause 2.2"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Forcible burglary covered minus $200 deductible; items within single-item limit."
+  },
+  {
+    "claim_id": "CLM-2026-0074",
+    "claimant_id": "CUST-6862",
+    "claimant_name": "Daniel Davis",
+    "policy_id": "POL-HOM-002",
+    "category": "Mysterious Disappearance Exclusion",
+    "claim_text": "Claimant states a gold diamond necklace disappeared from home during weekend party. No forced entry or damage to premises. Police report classifies as lost property.",
+    "claimed_amount": 3296.0,
+    "claimed_items": [
+      {
+        "item": "Gold Diamond Necklace",
+        "amount": 3200.0
+      }
+    ],
+    "incident_date": "2026-06-08",
+    "receipt_hash": "HASH-CLM-2026-0074-56357",
+    "expected_decision": "REJECTED",
+    "expected_cited_clauses": [
+      "Clause 3.1"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Mysterious disappearance and unforced loss excluded under Clause 3.1."
+  },
+  {
+    "claim_id": "CLM-2026-0075",
+    "claimant_id": "CUST-7658",
+    "claimant_name": "Evelyn Jones",
+    "policy_id": "POL-MOT-001",
+    "category": "Duplicate Invoice Fraud",
+    "claim_text": "Claim for bumper repair and paint respray following collision. Attached invoice receipt matches identical invoice number and transaction hash as claim CLM-2025-8812 submitted 3 months ago.",
+    "claimed_amount": 2086.5,
+    "claimed_items": [
+      {
+        "item": "Bumper Respray and Repair",
+        "amount": 1950.0
+      }
+    ],
+    "incident_date": "2026-06-25",
+    "receipt_hash": "DUP-HASH-99812-REPAIR",
+    "expected_decision": "ESCALATED",
+    "expected_cited_clauses": [
+      "Clause 1.1"
+    ],
+    "is_fraud": true,
+    "fraud_reason": "Duplicate invoice hash detected across previous claims database.",
+    "requires_human_review": true,
+    "evaluation_notes": "Flagged by fraud guard and escalated to SIU (Special Investigation Unit)."
+  },
+  {
+    "claim_id": "CLM-2026-0076",
+    "claimant_id": "CUST-4878",
+    "claimant_name": "Olivia Garcia",
+    "policy_id": "POL-HLT-001",
+    "category": "Inception Fraud",
+    "claim_text": "Policy activated on May 10, 2026. Claim filed on May 12, 2026 for extensive multi-week lumbar spine treatment with doctor notes dating back to April 2026 prior to policy bound date.",
+    "claimed_amount": 4558.0,
+    "claimed_items": [
+      {
+        "item": "Spinal Therapy & Injections",
+        "amount": 4300.0
+      }
+    ],
+    "incident_date": "2026-05-11",
+    "receipt_hash": null,
+    "expected_decision": "ESCALATED",
+    "expected_cited_clauses": [
+      "Clause 4.1"
+    ],
+    "is_fraud": true,
+    "fraud_reason": "Inception fraud: Incident occurred within 24 hours of policy inception with preexisting clinical records.",
+    "requires_human_review": true,
+    "evaluation_notes": "Flagged for fraudulent inception timing."
+  },
+  {
+    "claim_id": "CLM-2026-0077",
+    "claimant_id": "CUST-1406",
+    "claimant_name": "Olivia Hernandez",
+    "policy_id": "POL-HLT-001",
+    "category": "Inpatient Hospitalization",
+    "claim_text": "Claimant admitted to St. Jude Hospital for 3 days due to acute viral pneumonia. Underwent IV antibiotic therapy, chest X-rays, blood cultures, and 3 nights in standard single room. Total hospital bill $3,450.",
+    "claimed_amount": 3622.5,
+    "claimed_items": [
+      {
+        "item": "Room & Board 3 days",
+        "amount": 900.0
+      },
+      {
+        "item": "Diagnostic X-rays & Blood Tests",
+        "amount": 850.0
+      },
+      {
+        "item": "Physician & Specialist Fees",
+        "amount": 700.0
+      },
+      {
+        "item": "Pharmacy & Medication",
+        "amount": 1000.0
+      }
+    ],
+    "incident_date": "2026-03-12",
+    "receipt_hash": "HASH-CLM-2026-0077-63964",
+    "expected_decision": "APPROVED",
+    "expected_cited_clauses": [
+      "Clause 1.1",
+      "Clause 1.2",
+      "Clause 1.3",
+      "Clause 3.1"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Standard covered inpatient treatment minus $250 deductible."
+  },
+  {
+    "claim_id": "CLM-2026-0078",
+    "claimant_id": "CUST-5065",
+    "claimant_name": "Alexander Garcia",
+    "policy_id": "POL-HLT-001",
+    "category": "Ophthalmology / Day Care",
+    "claim_text": "Patient underwent elective phacoemulsification cataract surgery for the right eye with monofocal intraocular lens insertion at City Eye Institute. Total procedure bill is $2,100.",
+    "claimed_amount": 2205.0,
+    "claimed_items": [
+      {
+        "item": "Cataract Surgery Theatre Charges",
+        "amount": 1100.0
+      },
+      {
+        "item": "Intraocular Lens Implant",
+        "amount": 700.0
+      },
+      {
+        "item": "Surgeon Consultation",
+        "amount": 300.0
+      }
+    ],
+    "incident_date": "2026-04-05",
+    "receipt_hash": "HASH-CLM-2026-0078-24168",
+    "expected_decision": "APPROVED",
+    "expected_cited_clauses": [
+      "Clause 3.2"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Approved but capped at the $1,200 sub-limit specified in Clause 3.2."
+  },
+  {
+    "claim_id": "CLM-2026-0079",
+    "claimant_id": "CUST-7267",
+    "claimant_name": "Emma Thomas",
+    "policy_id": "POL-HLT-001",
+    "category": "Pre-Existing Exclusion",
+    "claim_text": "Claimant hospitalized for acute ischemic stroke and secondary hypertension. Medical records reveal ongoing treatment for chronic hypertension diagnosed 18 months prior to policy inception. Current policy active for 8 months.",
+    "claimed_amount": 7488.0,
+    "claimed_items": [
+      {
+        "item": "ICU Care 2 days",
+        "amount": 3200.0
+      },
+      {
+        "item": "Neurological Consultation & Medication",
+        "amount": 4600.0
+      }
+    ],
+    "incident_date": "2026-05-10",
+    "receipt_hash": "HASH-CLM-2026-0079-70332",
+    "expected_decision": "REJECTED",
+    "expected_cited_clauses": [
+      "Clause 4.1"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Pre-existing condition within 36-month exclusion waiting period."
+  },
+  {
+    "claim_id": "CLM-2026-0080",
+    "claimant_id": "CUST-6728",
+    "claimant_name": "Mia Davis",
+    "policy_id": "POL-HLT-001",
+    "category": "Cosmetic Exclusion",
+    "claim_text": "Patient underwent elective aesthetic rhinoplasty and septoplasty for facial aesthetic enhancement at Beverly Plastic Surgery Clinic. Total invoice $6,200.",
+    "claimed_amount": 5952.0,
+    "claimed_items": [
+      {
+        "item": "Rhinoplasty Surgical Fee",
+        "amount": 4500.0
+      },
+      {
+        "item": "Anesthesia & Facility Fee",
+        "amount": 1700.0
+      }
+    ],
+    "incident_date": "2026-06-15",
+    "receipt_hash": "HASH-CLM-2026-0080-96511",
+    "expected_decision": "REJECTED",
+    "expected_cited_clauses": [
+      "Clause 4.2"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Aesthetic and cosmetic surgeries are permanently excluded."
+  },
+  {
+    "claim_id": "CLM-2026-0081",
+    "claimant_id": "CUST-4164",
+    "claimant_name": "Benjamin Hernandez",
+    "policy_id": "POL-HLT-001",
+    "category": "High Value Orthopedic",
+    "claim_text": "Total knee replacement surgery following severe osteoarthritic degradation. Implant surgery, 5 days hospital stay, physical therapy. Total claimed amount $14,500.",
+    "claimed_amount": 13920.0,
+    "claimed_items": [
+      {
+        "item": "Knee Prosthesis Implant",
+        "amount": 5500.0
+      },
+      {
+        "item": "Surgical Theatre & Surgeon Fee",
+        "amount": 5000.0
+      },
+      {
+        "item": "Room Rent & Nursing 5 days",
+        "amount": 4000.0
+      }
+    ],
+    "incident_date": "2026-07-20",
+    "receipt_hash": "HASH-CLM-2026-0081-19099",
+    "expected_decision": "ESCALATED",
+    "expected_cited_clauses": [
+      "Clause 3.3"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": true,
+    "evaluation_notes": "High value claim exceeding $10,000 threshold and subject to Joint Replacement Sub-Limit."
+  },
+  {
+    "claim_id": "CLM-2026-0082",
+    "claimant_id": "CUST-5573",
+    "claimant_name": "Isabella Taylor",
+    "policy_id": "POL-HLT-002",
+    "category": "Robotic Surgery",
+    "claim_text": "Patient admitted for Da Vinci robotic-assisted laparoscopic radical prostatectomy at Metropolitan University Hospital. Incurred 2 nights in executive suite accommodation.",
+    "claimed_amount": 9016.0,
+    "claimed_items": [
+      {
+        "item": "Robotic Instrumentation Fee",
+        "amount": 3500.0
+      },
+      {
+        "item": "Surgical Team Fee",
+        "amount": 3700.0
+      },
+      {
+        "item": "Suite Room Stay",
+        "amount": 2000.0
+      }
+    ],
+    "incident_date": "2026-03-28",
+    "receipt_hash": "HASH-CLM-2026-0082-80282",
+    "expected_decision": "APPROVED",
+    "expected_cited_clauses": [
+      "Clause 1.1",
+      "Clause 1.2",
+      "Clause 3.1"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Fully covered under Gold Premier robotic surgery and suite accommodation."
+  },
+  {
+    "claim_id": "CLM-2026-0083",
+    "claimant_id": "CUST-6425",
+    "claimant_name": "James Brown",
+    "policy_id": "POL-HLT-002",
+    "category": "Mental Health",
+    "claim_text": "Inpatient admission to Horizon Behavioral Health Centre for acute major depressive disorder and psychiatric crisis stabilization for 10 days.",
+    "claimed_amount": 4452.0,
+    "claimed_items": [
+      {
+        "item": "Inpatient Psychiatric Care & Therapy",
+        "amount": 4200.0
+      }
+    ],
+    "incident_date": "2026-04-18",
+    "receipt_hash": "HASH-CLM-2026-0083-44237",
+    "expected_decision": "APPROVED",
+    "expected_cited_clauses": [
+      "Clause 2.1"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Covered within the $5,000 mental health annual aggregate limit."
+  },
+  {
+    "claim_id": "CLM-2026-0084",
+    "claimant_id": "CUST-3925",
+    "claimant_name": "Sebastian Rodriguez",
+    "policy_id": "POL-HLT-002",
+    "category": "Experimental Therapy Exclusion",
+    "claim_text": "Claim for unapproved experimental peptide therapy and uncertified stem cell infusion administered at an offshore wellness retreat.",
+    "claimed_amount": 7905.0,
+    "claimed_items": [
+      {
+        "item": "Unapproved Experimental Stem Cell Injection",
+        "amount": 8500.0
+      }
+    ],
+    "incident_date": "2026-05-22",
+    "receipt_hash": "HASH-CLM-2026-0084-88193",
+    "expected_decision": "REJECTED",
+    "expected_cited_clauses": [
+      "Clause 4.1"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Excluded under Clause 4.1: Unproven and experimental therapies."
+  },
+  {
+    "claim_id": "CLM-2026-0085",
+    "claimant_id": "CUST-8119",
+    "claimant_name": "Isabella Hernandez",
+    "policy_id": "POL-MOT-001",
+    "category": "Accidental Collision",
+    "claim_text": "Insured vehicle collided with concrete guardrail during heavy rain. Front bumper shattered, radiator ruptured, hood crumpled. Vehicle towed to authorized repair centre.",
+    "claimed_amount": 2772.0,
+    "claimed_items": [
+      {
+        "item": "Front Bumper Replacement (Plastic)",
+        "amount": 800.0
+      },
+      {
+        "item": "Radiator Replacement",
+        "amount": 600.0
+      },
+      {
+        "item": "Hood Panel Beating & Paint",
+        "amount": 1400.0
+      }
+    ],
+    "incident_date": "2026-02-14",
+    "receipt_hash": "HASH-CLM-2026-0085-77033",
+    "expected_decision": "APPROVED",
+    "expected_cited_clauses": [
+      "Clause 1.1",
+      "Clause 2.1",
+      "Clause 2.2"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Standard collision covered minus $350 deductible and 50% depreciation on plastic bumper."
+  },
+  {
+    "claim_id": "CLM-2026-0086",
+    "claimant_id": "CUST-2894",
+    "claimant_name": "Benjamin Jackson",
+    "policy_id": "POL-MOT-001",
+    "category": "Windshield Glass",
+    "claim_text": "Gravel airborne from highway truck struck front windshield causing extensive spiderweb cracking. Replacement of original OEM laminated windshield.",
+    "claimed_amount": 712.5,
+    "claimed_items": [
+      {
+        "item": "OEM Front Glass Windshield",
+        "amount": 600.0
+      },
+      {
+        "item": "Fitting & Sensor Calibration",
+        "amount": 150.0
+      }
+    ],
+    "incident_date": "2026-03-04",
+    "receipt_hash": "HASH-CLM-2026-0086-15817",
+    "expected_decision": "APPROVED",
+    "expected_cited_clauses": [
+      "Clause 1.1",
+      "Clause 2.2"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Glass components carry 0% depreciation deduction under Clause 2.2."
+  },
+  {
+    "claim_id": "CLM-2026-0087",
+    "claimant_id": "CUST-8144",
+    "claimant_name": "James Taylor",
+    "policy_id": "POL-MOT-001",
+    "category": "Drunk Driving Exclusion",
+    "claim_text": "Vehicle swerved into ditch at 2 AM. Police report indicates driver breathalyzer registered Blood Alcohol Concentration (BAC) of 0.14%, well above statutory 0.05% threshold.",
+    "claimed_amount": 5778.0,
+    "claimed_items": [
+      {
+        "item": "Chassis & Suspension Repair",
+        "amount": 5400.0
+      }
+    ],
+    "incident_date": "2026-04-11",
+    "receipt_hash": "HASH-CLM-2026-0087-80575",
+    "expected_decision": "REJECTED",
+    "expected_cited_clauses": [
+      "Clause 3.1"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Strictly excluded under Clause 3.1 for driving while intoxicated."
+  },
+  {
+    "claim_id": "CLM-2026-0088",
+    "claimant_id": "CUST-4228",
+    "claimant_name": "Isabella Wilson",
+    "policy_id": "POL-MOT-001",
+    "category": "Total Loss Burglary",
+    "claim_text": "Vehicle stolen from residential driveway overnight. Police FIR lodged immediately; vehicle unrecovered after 30 days. Insured Declared Value (IDV) is $24,000.",
+    "claimed_amount": 22320.0,
+    "claimed_items": [
+      {
+        "item": "Total Loss Vehicle IDV",
+        "amount": 24000.0
+      }
+    ],
+    "incident_date": "2026-05-01",
+    "receipt_hash": "HASH-CLM-2026-0088-97062",
+    "expected_decision": "ESCALATED",
+    "expected_cited_clauses": [
+      "Clause 1.4"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": true,
+    "evaluation_notes": "Valid total theft claim but exceeds $10k threshold, requiring senior adjuster sign-off."
+  },
+  {
+    "claim_id": "CLM-2026-0089",
+    "claimant_id": "CUST-6409",
+    "claimant_name": "Evelyn Hernandez",
+    "policy_id": "POL-HOM-001",
+    "category": "Sudden Pipe Burst",
+    "claim_text": "Internal second-floor bathroom copper supply pipe burst suddenly due to freezing temperatures, causing ceiling collapse and structural drywall flooding into ground floor living room.",
+    "claimed_amount": 4944.0,
+    "claimed_items": [
+      {
+        "item": "Drywall and Ceiling Structural Restoration",
+        "amount": 2800.0
+      },
+      {
+        "item": "Plumbing Pipe Replacement & Testing",
+        "amount": 800.0
+      },
+      {
+        "item": "Hardwood Floor Drying & Remediation",
+        "amount": 1200.0
+      }
+    ],
+    "incident_date": "2026-01-20",
+    "receipt_hash": "HASH-CLM-2026-0089-26334",
+    "expected_decision": "APPROVED",
+    "expected_cited_clauses": [
+      "Clause 1.3",
+      "Clause 2.1"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Sudden bursting covered minus $500 property deductible."
+  },
+  {
+    "claim_id": "CLM-2026-0090",
+    "claimant_id": "CUST-5920",
+    "claimant_name": "Henry Martinez",
+    "policy_id": "POL-HOM-001",
+    "category": "Gradual Seepage Exclusion",
+    "claim_text": "Homeowner reported mold growth and rotting baseboards in basement. Certified building inspector concluded damage resulted from continuous rainwater capillary seepage over 2 years.",
+    "claimed_amount": 4017.0,
+    "claimed_items": [
+      {
+        "item": "Basement Mold Removal & Foundation Sealing",
+        "amount": 3900.0
+      }
+    ],
+    "incident_date": "2026-03-15",
+    "receipt_hash": "HASH-CLM-2026-0090-52753",
+    "expected_decision": "REJECTED",
+    "expected_cited_clauses": [
+      "Clause 3.1"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Gradual long-term seepage and maintenance failure excluded under Clause 3.1."
+  },
+  {
+    "claim_id": "CLM-2026-0091",
+    "claimant_id": "CUST-7592",
+    "claimant_name": "Mia Moore",
+    "policy_id": "POL-HOM-001",
+    "category": "Major Fire Damage",
+    "claim_text": "Kitchen grease fire spread to roof rafters and attic structure. Fire service response extinguished flames but upper level sustained major structural charring. Claim includes temporary rental housing.",
+    "claimed_amount": 26790.0,
+    "claimed_items": [
+      {
+        "item": "Roof & Structural Timber Rebuilding",
+        "amount": 22000.0
+      },
+      {
+        "item": "Temporary Accommodation 3 Months",
+        "amount": 6500.0
+      }
+    ],
+    "incident_date": "2026-04-02",
+    "receipt_hash": "HASH-CLM-2026-0091-65108",
+    "expected_decision": "ESCALATED",
+    "expected_cited_clauses": [
+      "Clause 1.1",
+      "Clause 2.2"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": true,
+    "evaluation_notes": "High value claim ($28.5k) routed to human adjuster for contractor quote validation."
+  },
+  {
+    "claim_id": "CLM-2026-0092",
+    "claimant_id": "CUST-7211",
+    "claimant_name": "Olivia Martin",
+    "policy_id": "POL-HOM-002",
+    "category": "Burglary Forced Entry",
+    "claim_text": "Apartment rear patio door forced open with crowbar while tenant was at work. Burglar took 65-inch OLED television, gaming console, laptop, and leather jacket. Police evidence of jimmy marks attached.",
+    "claimed_amount": 3131.0,
+    "claimed_items": [
+      {
+        "item": "65-inch 4K OLED TV",
+        "amount": 1600.0
+      },
+      {
+        "item": "Gaming Console & Controllers",
+        "amount": 600.0
+      },
+      {
+        "item": "Laptop Computer",
+        "amount": 900.0
+      }
+    ],
+    "incident_date": "2026-05-18",
+    "receipt_hash": "HASH-CLM-2026-0092-63225",
+    "expected_decision": "APPROVED",
+    "expected_cited_clauses": [
+      "Clause 1.1",
+      "Clause 2.1",
+      "Clause 2.2"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Forcible burglary covered minus $200 deductible; items within single-item limit."
+  },
+  {
+    "claim_id": "CLM-2026-0093",
+    "claimant_id": "CUST-9977",
+    "claimant_name": "James Martinez",
+    "policy_id": "POL-HOM-002",
+    "category": "Mysterious Disappearance Exclusion",
+    "claim_text": "Claimant states a gold diamond necklace disappeared from home during weekend party. No forced entry or damage to premises. Police report classifies as lost property.",
+    "claimed_amount": 3104.0,
+    "claimed_items": [
+      {
+        "item": "Gold Diamond Necklace",
+        "amount": 3200.0
+      }
+    ],
+    "incident_date": "2026-06-08",
+    "receipt_hash": "HASH-CLM-2026-0093-66346",
+    "expected_decision": "REJECTED",
+    "expected_cited_clauses": [
+      "Clause 3.1"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Mysterious disappearance and unforced loss excluded under Clause 3.1."
+  },
+  {
+    "claim_id": "CLM-2026-0094",
+    "claimant_id": "CUST-6279",
+    "claimant_name": "Lucas Anderson",
+    "policy_id": "POL-MOT-001",
+    "category": "Duplicate Invoice Fraud",
+    "claim_text": "Claim for bumper repair and paint respray following collision. Attached invoice receipt matches identical invoice number and transaction hash as claim CLM-2025-8812 submitted 3 months ago.",
+    "claimed_amount": 1930.5,
+    "claimed_items": [
+      {
+        "item": "Bumper Respray and Repair",
+        "amount": 1950.0
+      }
+    ],
+    "incident_date": "2026-06-25",
+    "receipt_hash": "DUP-HASH-99812-REPAIR",
+    "expected_decision": "ESCALATED",
+    "expected_cited_clauses": [
+      "Clause 1.1"
+    ],
+    "is_fraud": true,
+    "fraud_reason": "Duplicate invoice hash detected across previous claims database.",
+    "requires_human_review": true,
+    "evaluation_notes": "Flagged by fraud guard and escalated to SIU (Special Investigation Unit)."
+  },
+  {
+    "claim_id": "CLM-2026-0095",
+    "claimant_id": "CUST-4501",
+    "claimant_name": "Henry Thomas",
+    "policy_id": "POL-HLT-001",
+    "category": "Inception Fraud",
+    "claim_text": "Policy activated on May 10, 2026. Claim filed on May 12, 2026 for extensive multi-week lumbar spine treatment with doctor notes dating back to April 2026 prior to policy bound date.",
+    "claimed_amount": 4515.0,
+    "claimed_items": [
+      {
+        "item": "Spinal Therapy & Injections",
+        "amount": 4300.0
+      }
+    ],
+    "incident_date": "2026-05-11",
+    "receipt_hash": null,
+    "expected_decision": "ESCALATED",
+    "expected_cited_clauses": [
+      "Clause 4.1"
+    ],
+    "is_fraud": true,
+    "fraud_reason": "Inception fraud: Incident occurred within 24 hours of policy inception with preexisting clinical records.",
+    "requires_human_review": true,
+    "evaluation_notes": "Flagged for fraudulent inception timing."
+  },
+  {
+    "claim_id": "CLM-2026-0096",
+    "claimant_id": "CUST-3780",
+    "claimant_name": "Michael Martinez",
+    "policy_id": "POL-HLT-001",
+    "category": "Inpatient Hospitalization",
+    "claim_text": "Claimant admitted to St. Jude Hospital for 3 days due to acute viral pneumonia. Underwent IV antibiotic therapy, chest X-rays, blood cultures, and 3 nights in standard single room. Total hospital bill $3,450.",
+    "claimed_amount": 3450.0,
+    "claimed_items": [
+      {
+        "item": "Room & Board 3 days",
+        "amount": 900.0
+      },
+      {
+        "item": "Diagnostic X-rays & Blood Tests",
+        "amount": 850.0
+      },
+      {
+        "item": "Physician & Specialist Fees",
+        "amount": 700.0
+      },
+      {
+        "item": "Pharmacy & Medication",
+        "amount": 1000.0
+      }
+    ],
+    "incident_date": "2026-03-12",
+    "receipt_hash": "HASH-CLM-2026-0096-92960",
+    "expected_decision": "APPROVED",
+    "expected_cited_clauses": [
+      "Clause 1.1",
+      "Clause 1.2",
+      "Clause 1.3",
+      "Clause 3.1"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Standard covered inpatient treatment minus $250 deductible."
+  },
+  {
+    "claim_id": "CLM-2026-0097",
+    "claimant_id": "CUST-6491",
+    "claimant_name": "Michael Davis",
+    "policy_id": "POL-HLT-001",
+    "category": "Ophthalmology / Day Care",
+    "claim_text": "Patient underwent elective phacoemulsification cataract surgery for the right eye with monofocal intraocular lens insertion at City Eye Institute. Total procedure bill is $2,100.",
+    "claimed_amount": 2163.0,
+    "claimed_items": [
+      {
+        "item": "Cataract Surgery Theatre Charges",
+        "amount": 1100.0
+      },
+      {
+        "item": "Intraocular Lens Implant",
+        "amount": 700.0
+      },
+      {
+        "item": "Surgeon Consultation",
+        "amount": 300.0
+      }
+    ],
+    "incident_date": "2026-04-05",
+    "receipt_hash": "HASH-CLM-2026-0097-39444",
+    "expected_decision": "APPROVED",
+    "expected_cited_clauses": [
+      "Clause 3.2"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Approved but capped at the $1,200 sub-limit specified in Clause 3.2."
+  },
+  {
+    "claim_id": "CLM-2026-0098",
+    "claimant_id": "CUST-4262",
+    "claimant_name": "David Smith",
+    "policy_id": "POL-HLT-001",
+    "category": "Pre-Existing Exclusion",
+    "claim_text": "Claimant hospitalized for acute ischemic stroke and secondary hypertension. Medical records reveal ongoing treatment for chronic hypertension diagnosed 18 months prior to policy inception. Current policy active for 8 months.",
+    "claimed_amount": 7254.0,
+    "claimed_items": [
+      {
+        "item": "ICU Care 2 days",
+        "amount": 3200.0
+      },
+      {
+        "item": "Neurological Consultation & Medication",
+        "amount": 4600.0
+      }
+    ],
+    "incident_date": "2026-05-10",
+    "receipt_hash": "HASH-CLM-2026-0098-72277",
+    "expected_decision": "REJECTED",
+    "expected_cited_clauses": [
+      "Clause 4.1"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Pre-existing condition within 36-month exclusion waiting period."
+  },
+  {
+    "claim_id": "CLM-2026-0099",
+    "claimant_id": "CUST-2193",
+    "claimant_name": "Lucas Wilson",
+    "policy_id": "POL-HLT-001",
+    "category": "Cosmetic Exclusion",
+    "claim_text": "Patient underwent elective aesthetic rhinoplasty and septoplasty for facial aesthetic enhancement at Beverly Plastic Surgery Clinic. Total invoice $6,200.",
+    "claimed_amount": 6572.0,
+    "claimed_items": [
+      {
+        "item": "Rhinoplasty Surgical Fee",
+        "amount": 4500.0
+      },
+      {
+        "item": "Anesthesia & Facility Fee",
+        "amount": 1700.0
+      }
+    ],
+    "incident_date": "2026-06-15",
+    "receipt_hash": "HASH-CLM-2026-0099-85454",
+    "expected_decision": "REJECTED",
+    "expected_cited_clauses": [
+      "Clause 4.2"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Aesthetic and cosmetic surgeries are permanently excluded."
+  },
+  {
+    "claim_id": "CLM-2026-0100",
+    "claimant_id": "CUST-4185",
+    "claimant_name": "Benjamin Thomas",
+    "policy_id": "POL-HLT-001",
+    "category": "High Value Orthopedic",
+    "claim_text": "Total knee replacement surgery following severe osteoarthritic degradation. Implant surgery, 5 days hospital stay, physical therapy. Total claimed amount $14,500.",
+    "claimed_amount": 14210.0,
+    "claimed_items": [
+      {
+        "item": "Knee Prosthesis Implant",
+        "amount": 5500.0
+      },
+      {
+        "item": "Surgical Theatre & Surgeon Fee",
+        "amount": 5000.0
+      },
+      {
+        "item": "Room Rent & Nursing 5 days",
+        "amount": 4000.0
+      }
+    ],
+    "incident_date": "2026-07-20",
+    "receipt_hash": "HASH-CLM-2026-0100-29342",
+    "expected_decision": "ESCALATED",
+    "expected_cited_clauses": [
+      "Clause 3.3"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": true,
+    "evaluation_notes": "High value claim exceeding $10,000 threshold and subject to Joint Replacement Sub-Limit."
+  },
+  {
+    "claim_id": "CLM-2026-0101",
+    "claimant_id": "CUST-1090",
+    "claimant_name": "Sophia Wilson",
+    "policy_id": "POL-HLT-002",
+    "category": "Robotic Surgery",
+    "claim_text": "Patient admitted for Da Vinci robotic-assisted laparoscopic radical prostatectomy at Metropolitan University Hospital. Incurred 2 nights in executive suite accommodation.",
+    "claimed_amount": 8832.0,
+    "claimed_items": [
+      {
+        "item": "Robotic Instrumentation Fee",
+        "amount": 3500.0
+      },
+      {
+        "item": "Surgical Team Fee",
+        "amount": 3700.0
+      },
+      {
+        "item": "Suite Room Stay",
+        "amount": 2000.0
+      }
+    ],
+    "incident_date": "2026-03-28",
+    "receipt_hash": "HASH-CLM-2026-0101-77889",
+    "expected_decision": "APPROVED",
+    "expected_cited_clauses": [
+      "Clause 1.1",
+      "Clause 1.2",
+      "Clause 3.1"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Fully covered under Gold Premier robotic surgery and suite accommodation."
+  },
+  {
+    "claim_id": "CLM-2026-0102",
+    "claimant_id": "CUST-8611",
+    "claimant_name": "Emma Moore",
+    "policy_id": "POL-HLT-002",
+    "category": "Mental Health",
+    "claim_text": "Inpatient admission to Horizon Behavioral Health Centre for acute major depressive disorder and psychiatric crisis stabilization for 10 days.",
+    "claimed_amount": 4032.0,
+    "claimed_items": [
+      {
+        "item": "Inpatient Psychiatric Care & Therapy",
+        "amount": 4200.0
+      }
+    ],
+    "incident_date": "2026-04-18",
+    "receipt_hash": "HASH-CLM-2026-0102-25906",
+    "expected_decision": "APPROVED",
+    "expected_cited_clauses": [
+      "Clause 2.1"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Covered within the $5,000 mental health annual aggregate limit."
+  },
+  {
+    "claim_id": "CLM-2026-0103",
+    "claimant_id": "CUST-8478",
+    "claimant_name": "David Anderson",
+    "policy_id": "POL-HLT-002",
+    "category": "Experimental Therapy Exclusion",
+    "claim_text": "Claim for unapproved experimental peptide therapy and uncertified stem cell infusion administered at an offshore wellness retreat.",
+    "claimed_amount": 8755.0,
+    "claimed_items": [
+      {
+        "item": "Unapproved Experimental Stem Cell Injection",
+        "amount": 8500.0
+      }
+    ],
+    "incident_date": "2026-05-22",
+    "receipt_hash": "HASH-CLM-2026-0103-83259",
+    "expected_decision": "REJECTED",
+    "expected_cited_clauses": [
+      "Clause 4.1"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Excluded under Clause 4.1: Unproven and experimental therapies."
+  },
+  {
+    "claim_id": "CLM-2026-0104",
+    "claimant_id": "CUST-6198",
+    "claimant_name": "Lucas Martin",
+    "policy_id": "POL-MOT-001",
+    "category": "Accidental Collision",
+    "claim_text": "Insured vehicle collided with concrete guardrail during heavy rain. Front bumper shattered, radiator ruptured, hood crumpled. Vehicle towed to authorized repair centre.",
+    "claimed_amount": 2940.0,
+    "claimed_items": [
+      {
+        "item": "Front Bumper Replacement (Plastic)",
+        "amount": 800.0
+      },
+      {
+        "item": "Radiator Replacement",
+        "amount": 600.0
+      },
+      {
+        "item": "Hood Panel Beating & Paint",
+        "amount": 1400.0
+      }
+    ],
+    "incident_date": "2026-02-14",
+    "receipt_hash": "HASH-CLM-2026-0104-76162",
+    "expected_decision": "APPROVED",
+    "expected_cited_clauses": [
+      "Clause 1.1",
+      "Clause 2.1",
+      "Clause 2.2"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Standard collision covered minus $350 deductible and 50% depreciation on plastic bumper."
+  },
+  {
+    "claim_id": "CLM-2026-0105",
+    "claimant_id": "CUST-7991",
+    "claimant_name": "Harper Anderson",
+    "policy_id": "POL-MOT-001",
+    "category": "Windshield Glass",
+    "claim_text": "Gravel airborne from highway truck struck front windshield causing extensive spiderweb cracking. Replacement of original OEM laminated windshield.",
+    "claimed_amount": 795.0,
+    "claimed_items": [
+      {
+        "item": "OEM Front Glass Windshield",
+        "amount": 600.0
+      },
+      {
+        "item": "Fitting & Sensor Calibration",
+        "amount": 150.0
+      }
+    ],
+    "incident_date": "2026-03-04",
+    "receipt_hash": "HASH-CLM-2026-0105-72216",
+    "expected_decision": "APPROVED",
+    "expected_cited_clauses": [
+      "Clause 1.1",
+      "Clause 2.2"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Glass components carry 0% depreciation deduction under Clause 2.2."
+  },
+  {
+    "claim_id": "CLM-2026-0106",
+    "claimant_id": "CUST-8373",
+    "claimant_name": "Alexander Davis",
+    "policy_id": "POL-MOT-001",
+    "category": "Drunk Driving Exclusion",
+    "claim_text": "Vehicle swerved into ditch at 2 AM. Police report indicates driver breathalyzer registered Blood Alcohol Concentration (BAC) of 0.14%, well above statutory 0.05% threshold.",
+    "claimed_amount": 5670.0,
+    "claimed_items": [
+      {
+        "item": "Chassis & Suspension Repair",
+        "amount": 5400.0
+      }
+    ],
+    "incident_date": "2026-04-11",
+    "receipt_hash": "HASH-CLM-2026-0106-46347",
+    "expected_decision": "REJECTED",
+    "expected_cited_clauses": [
+      "Clause 3.1"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Strictly excluded under Clause 3.1 for driving while intoxicated."
+  },
+  {
+    "claim_id": "CLM-2026-0107",
+    "claimant_id": "CUST-9540",
+    "claimant_name": "Amelia Davis",
+    "policy_id": "POL-MOT-001",
+    "category": "Total Loss Burglary",
+    "claim_text": "Vehicle stolen from residential driveway overnight. Police FIR lodged immediately; vehicle unrecovered after 30 days. Insured Declared Value (IDV) is $24,000.",
+    "claimed_amount": 23040.0,
+    "claimed_items": [
+      {
+        "item": "Total Loss Vehicle IDV",
+        "amount": 24000.0
+      }
+    ],
+    "incident_date": "2026-05-01",
+    "receipt_hash": "HASH-CLM-2026-0107-20155",
+    "expected_decision": "ESCALATED",
+    "expected_cited_clauses": [
+      "Clause 1.4"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": true,
+    "evaluation_notes": "Valid total theft claim but exceeds $10k threshold, requiring senior adjuster sign-off."
+  },
+  {
+    "claim_id": "CLM-2026-0108",
+    "claimant_id": "CUST-5681",
+    "claimant_name": "Ava Rodriguez",
+    "policy_id": "POL-HOM-001",
+    "category": "Sudden Pipe Burst",
+    "claim_text": "Internal second-floor bathroom copper supply pipe burst suddenly due to freezing temperatures, causing ceiling collapse and structural drywall flooding into ground floor living room.",
+    "claimed_amount": 4656.0,
+    "claimed_items": [
+      {
+        "item": "Drywall and Ceiling Structural Restoration",
+        "amount": 2800.0
+      },
+      {
+        "item": "Plumbing Pipe Replacement & Testing",
+        "amount": 800.0
+      },
+      {
+        "item": "Hardwood Floor Drying & Remediation",
+        "amount": 1200.0
+      }
+    ],
+    "incident_date": "2026-01-20",
+    "receipt_hash": "HASH-CLM-2026-0108-80798",
+    "expected_decision": "APPROVED",
+    "expected_cited_clauses": [
+      "Clause 1.3",
+      "Clause 2.1"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Sudden bursting covered minus $500 property deductible."
+  },
+  {
+    "claim_id": "CLM-2026-0109",
+    "claimant_id": "CUST-2320",
+    "claimant_name": "David Jones",
+    "policy_id": "POL-HOM-001",
+    "category": "Gradual Seepage Exclusion",
+    "claim_text": "Homeowner reported mold growth and rotting baseboards in basement. Certified building inspector concluded damage resulted from continuous rainwater capillary seepage over 2 years.",
+    "claimed_amount": 3744.0,
+    "claimed_items": [
+      {
+        "item": "Basement Mold Removal & Foundation Sealing",
+        "amount": 3900.0
+      }
+    ],
+    "incident_date": "2026-03-15",
+    "receipt_hash": "HASH-CLM-2026-0109-30028",
+    "expected_decision": "REJECTED",
+    "expected_cited_clauses": [
+      "Clause 3.1"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Gradual long-term seepage and maintenance failure excluded under Clause 3.1."
+  },
+  {
+    "claim_id": "CLM-2026-0110",
+    "claimant_id": "CUST-4505",
+    "claimant_name": "Michael Wilson",
+    "policy_id": "POL-HOM-001",
+    "category": "Major Fire Damage",
+    "claim_text": "Kitchen grease fire spread to roof rafters and attic structure. Fire service response extinguished flames but upper level sustained major structural charring. Claim includes temporary rental housing.",
+    "claimed_amount": 28215.0,
+    "claimed_items": [
+      {
+        "item": "Roof & Structural Timber Rebuilding",
+        "amount": 22000.0
+      },
+      {
+        "item": "Temporary Accommodation 3 Months",
+        "amount": 6500.0
+      }
+    ],
+    "incident_date": "2026-04-02",
+    "receipt_hash": "HASH-CLM-2026-0110-81121",
+    "expected_decision": "ESCALATED",
+    "expected_cited_clauses": [
+      "Clause 1.1",
+      "Clause 2.2"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": true,
+    "evaluation_notes": "High value claim ($28.5k) routed to human adjuster for contractor quote validation."
+  },
+  {
+    "claim_id": "CLM-2026-0111",
+    "claimant_id": "CUST-8633",
+    "claimant_name": "Charlotte Johnson",
+    "policy_id": "POL-HOM-002",
+    "category": "Burglary Forced Entry",
+    "claim_text": "Apartment rear patio door forced open with crowbar while tenant was at work. Burglar took 65-inch OLED television, gaming console, laptop, and leather jacket. Police evidence of jimmy marks attached.",
+    "claimed_amount": 2945.0,
+    "claimed_items": [
+      {
+        "item": "65-inch 4K OLED TV",
+        "amount": 1600.0
+      },
+      {
+        "item": "Gaming Console & Controllers",
+        "amount": 600.0
+      },
+      {
+        "item": "Laptop Computer",
+        "amount": 900.0
+      }
+    ],
+    "incident_date": "2026-05-18",
+    "receipt_hash": "HASH-CLM-2026-0111-65069",
+    "expected_decision": "APPROVED",
+    "expected_cited_clauses": [
+      "Clause 1.1",
+      "Clause 2.1",
+      "Clause 2.2"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Forcible burglary covered minus $200 deductible; items within single-item limit."
+  },
+  {
+    "claim_id": "CLM-2026-0112",
+    "claimant_id": "CUST-7381",
+    "claimant_name": "Sebastian Smith",
+    "policy_id": "POL-HOM-002",
+    "category": "Mysterious Disappearance Exclusion",
+    "claim_text": "Claimant states a gold diamond necklace disappeared from home during weekend party. No forced entry or damage to premises. Police report classifies as lost property.",
+    "claimed_amount": 3392.0,
+    "claimed_items": [
+      {
+        "item": "Gold Diamond Necklace",
+        "amount": 3200.0
+      }
+    ],
+    "incident_date": "2026-06-08",
+    "receipt_hash": "HASH-CLM-2026-0112-85456",
+    "expected_decision": "REJECTED",
+    "expected_cited_clauses": [
+      "Clause 3.1"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Mysterious disappearance and unforced loss excluded under Clause 3.1."
+  },
+  {
+    "claim_id": "CLM-2026-0113",
+    "claimant_id": "CUST-7232",
+    "claimant_name": "Amelia Smith",
+    "policy_id": "POL-MOT-001",
+    "category": "Duplicate Invoice Fraud",
+    "claim_text": "Claim for bumper repair and paint respray following collision. Attached invoice receipt matches identical invoice number and transaction hash as claim CLM-2025-8812 submitted 3 months ago.",
+    "claimed_amount": 2086.5,
+    "claimed_items": [
+      {
+        "item": "Bumper Respray and Repair",
+        "amount": 1950.0
+      }
+    ],
+    "incident_date": "2026-06-25",
+    "receipt_hash": "DUP-HASH-99812-REPAIR",
+    "expected_decision": "ESCALATED",
+    "expected_cited_clauses": [
+      "Clause 1.1"
+    ],
+    "is_fraud": true,
+    "fraud_reason": "Duplicate invoice hash detected across previous claims database.",
+    "requires_human_review": true,
+    "evaluation_notes": "Flagged by fraud guard and escalated to SIU (Special Investigation Unit)."
+  },
+  {
+    "claim_id": "CLM-2026-0114",
+    "claimant_id": "CUST-5892",
+    "claimant_name": "Benjamin Wilson",
+    "policy_id": "POL-HLT-001",
+    "category": "Inception Fraud",
+    "claim_text": "Policy activated on May 10, 2026. Claim filed on May 12, 2026 for extensive multi-week lumbar spine treatment with doctor notes dating back to April 2026 prior to policy bound date.",
+    "claimed_amount": 4343.0,
+    "claimed_items": [
+      {
+        "item": "Spinal Therapy & Injections",
+        "amount": 4300.0
+      }
+    ],
+    "incident_date": "2026-05-11",
+    "receipt_hash": null,
+    "expected_decision": "ESCALATED",
+    "expected_cited_clauses": [
+      "Clause 4.1"
+    ],
+    "is_fraud": true,
+    "fraud_reason": "Inception fraud: Incident occurred within 24 hours of policy inception with preexisting clinical records.",
+    "requires_human_review": true,
+    "evaluation_notes": "Flagged for fraudulent inception timing."
+  },
+  {
+    "claim_id": "CLM-2026-0115",
+    "claimant_id": "CUST-9947",
+    "claimant_name": "Evelyn Davis",
+    "policy_id": "POL-HLT-001",
+    "category": "Inpatient Hospitalization",
+    "claim_text": "Claimant admitted to St. Jude Hospital for 3 days due to acute viral pneumonia. Underwent IV antibiotic therapy, chest X-rays, blood cultures, and 3 nights in standard single room. Total hospital bill $3,450.",
+    "claimed_amount": 3450.0,
+    "claimed_items": [
+      {
+        "item": "Room & Board 3 days",
+        "amount": 900.0
+      },
+      {
+        "item": "Diagnostic X-rays & Blood Tests",
+        "amount": 850.0
+      },
+      {
+        "item": "Physician & Specialist Fees",
+        "amount": 700.0
+      },
+      {
+        "item": "Pharmacy & Medication",
+        "amount": 1000.0
+      }
+    ],
+    "incident_date": "2026-03-12",
+    "receipt_hash": "HASH-CLM-2026-0115-45774",
+    "expected_decision": "APPROVED",
+    "expected_cited_clauses": [
+      "Clause 1.1",
+      "Clause 1.2",
+      "Clause 1.3",
+      "Clause 3.1"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Standard covered inpatient treatment minus $250 deductible."
+  },
+  {
+    "claim_id": "CLM-2026-0116",
+    "claimant_id": "CUST-8140",
+    "claimant_name": "Amelia Smith",
+    "policy_id": "POL-HLT-001",
+    "category": "Ophthalmology / Day Care",
+    "claim_text": "Patient underwent elective phacoemulsification cataract surgery for the right eye with monofocal intraocular lens insertion at City Eye Institute. Total procedure bill is $2,100.",
+    "claimed_amount": 2058.0,
+    "claimed_items": [
+      {
+        "item": "Cataract Surgery Theatre Charges",
+        "amount": 1100.0
+      },
+      {
+        "item": "Intraocular Lens Implant",
+        "amount": 700.0
+      },
+      {
+        "item": "Surgeon Consultation",
+        "amount": 300.0
+      }
+    ],
+    "incident_date": "2026-04-05",
+    "receipt_hash": "HASH-CLM-2026-0116-97670",
+    "expected_decision": "APPROVED",
+    "expected_cited_clauses": [
+      "Clause 3.2"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Approved but capped at the $1,200 sub-limit specified in Clause 3.2."
+  },
+  {
+    "claim_id": "CLM-2026-0117",
+    "claimant_id": "CUST-7624",
+    "claimant_name": "Olivia Anderson",
+    "policy_id": "POL-HLT-001",
+    "category": "Pre-Existing Exclusion",
+    "claim_text": "Claimant hospitalized for acute ischemic stroke and secondary hypertension. Medical records reveal ongoing treatment for chronic hypertension diagnosed 18 months prior to policy inception. Current policy active for 8 months.",
+    "claimed_amount": 8346.0,
+    "claimed_items": [
+      {
+        "item": "ICU Care 2 days",
+        "amount": 3200.0
+      },
+      {
+        "item": "Neurological Consultation & Medication",
+        "amount": 4600.0
+      }
+    ],
+    "incident_date": "2026-05-10",
+    "receipt_hash": "HASH-CLM-2026-0117-91560",
+    "expected_decision": "REJECTED",
+    "expected_cited_clauses": [
+      "Clause 4.1"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Pre-existing condition within 36-month exclusion waiting period."
+  },
+  {
+    "claim_id": "CLM-2026-0118",
+    "claimant_id": "CUST-9751",
+    "claimant_name": "James Gonzalez",
+    "policy_id": "POL-HLT-001",
+    "category": "Cosmetic Exclusion",
+    "claim_text": "Patient underwent elective aesthetic rhinoplasty and septoplasty for facial aesthetic enhancement at Beverly Plastic Surgery Clinic. Total invoice $6,200.",
+    "claimed_amount": 6262.0,
+    "claimed_items": [
+      {
+        "item": "Rhinoplasty Surgical Fee",
+        "amount": 4500.0
+      },
+      {
+        "item": "Anesthesia & Facility Fee",
+        "amount": 1700.0
+      }
+    ],
+    "incident_date": "2026-06-15",
+    "receipt_hash": "HASH-CLM-2026-0118-96900",
+    "expected_decision": "REJECTED",
+    "expected_cited_clauses": [
+      "Clause 4.2"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Aesthetic and cosmetic surgeries are permanently excluded."
+  },
+  {
+    "claim_id": "CLM-2026-0119",
+    "claimant_id": "CUST-1444",
+    "claimant_name": "Michael Wilson",
+    "policy_id": "POL-HLT-001",
+    "category": "High Value Orthopedic",
+    "claim_text": "Total knee replacement surgery following severe osteoarthritic degradation. Implant surgery, 5 days hospital stay, physical therapy. Total claimed amount $14,500.",
+    "claimed_amount": 13630.0,
+    "claimed_items": [
+      {
+        "item": "Knee Prosthesis Implant",
+        "amount": 5500.0
+      },
+      {
+        "item": "Surgical Theatre & Surgeon Fee",
+        "amount": 5000.0
+      },
+      {
+        "item": "Room Rent & Nursing 5 days",
+        "amount": 4000.0
+      }
+    ],
+    "incident_date": "2026-07-20",
+    "receipt_hash": "HASH-CLM-2026-0119-70515",
+    "expected_decision": "ESCALATED",
+    "expected_cited_clauses": [
+      "Clause 3.3"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": true,
+    "evaluation_notes": "High value claim exceeding $10,000 threshold and subject to Joint Replacement Sub-Limit."
+  },
+  {
+    "claim_id": "CLM-2026-0120",
+    "claimant_id": "CUST-3977",
+    "claimant_name": "Emma Rodriguez",
+    "policy_id": "POL-HLT-002",
+    "category": "Robotic Surgery",
+    "claim_text": "Patient admitted for Da Vinci robotic-assisted laparoscopic radical prostatectomy at Metropolitan University Hospital. Incurred 2 nights in executive suite accommodation.",
+    "claimed_amount": 9016.0,
+    "claimed_items": [
+      {
+        "item": "Robotic Instrumentation Fee",
+        "amount": 3500.0
+      },
+      {
+        "item": "Surgical Team Fee",
+        "amount": 3700.0
+      },
+      {
+        "item": "Suite Room Stay",
+        "amount": 2000.0
+      }
+    ],
+    "incident_date": "2026-03-28",
+    "receipt_hash": "HASH-CLM-2026-0120-37742",
+    "expected_decision": "APPROVED",
+    "expected_cited_clauses": [
+      "Clause 1.1",
+      "Clause 1.2",
+      "Clause 3.1"
+    ],
+    "is_fraud": false,
+    "fraud_reason": null,
+    "requires_human_review": false,
+    "evaluation_notes": "Fully covered under Gold Premier robotic surgery and suite accommodation."
+  }
+]

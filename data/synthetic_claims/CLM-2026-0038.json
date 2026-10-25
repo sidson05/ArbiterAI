@@ -1,0 +1,25 @@
+{
+  "claim_id": "CLM-2026-0038",
+  "claimant_id": "CUST-4770",
+  "claimant_name": "Sebastian Davis",
+  "policy_id": "POL-HLT-001",
+  "category": "Inception Fraud",
+  "claim_text": "Policy activated on May 10, 2026. Claim filed on May 12, 2026 for extensive multi-week lumbar spine treatment with doctor notes dating back to April 2026 prior to policy bound date.",
+  "claimed_amount": 3956.0,
+  "claimed_items": [
+    {
+      "item": "Spinal Therapy & Injections",
+      "amount": 4300.0
+    }
+  ],
+  "incident_date": "2026-05-11",
+  "receipt_hash": null,
+  "expected_decision": "ESCALATED",
+  "expected_cited_clauses": [
+    "Clause 4.1"
+  ],
+  "is_fraud": true,
+  "fraud_reason": "Inception fraud: Incident occurred within 24 hours of policy inception with preexisting clinical records.",
+  "requires_human_review": true,
+  "evaluation_notes": "Flagged for fraudulent inception timing."
+}

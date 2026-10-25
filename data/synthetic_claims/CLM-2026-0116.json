@@ -1,0 +1,33 @@
+{
+  "claim_id": "CLM-2026-0116",
+  "claimant_id": "CUST-8140",
+  "claimant_name": "Amelia Smith",
+  "policy_id": "POL-HLT-001",
+  "category": "Ophthalmology / Day Care",
+  "claim_text": "Patient underwent elective phacoemulsification cataract surgery for the right eye with monofocal intraocular lens insertion at City Eye Institute. Total procedure bill is $2,100.",
+  "claimed_amount": 2058.0,
+  "claimed_items": [
+    {
+      "item": "Cataract Surgery Theatre Charges",
+      "amount": 1100.0
+    },
+    {
+      "item": "Intraocular Lens Implant",
+      "amount": 700.0
+    },
+    {
+      "item": "Surgeon Consultation",
+      "amount": 300.0
+    }
+  ],
+  "incident_date": "2026-04-05",
+  "receipt_hash": "HASH-CLM-2026-0116-97670",
+  "expected_decision": "APPROVED",
+  "expected_cited_clauses": [
+    "Clause 3.2"
+  ],
+  "is_fraud": false,
+  "fraud_reason": null,
+  "requires_human_review": false,
+  "evaluation_notes": "Approved but capped at the $1,200 sub-limit specified in Clause 3.2."
+}

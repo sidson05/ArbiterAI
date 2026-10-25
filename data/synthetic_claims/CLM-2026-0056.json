@@ -1,0 +1,25 @@
+{
+  "claim_id": "CLM-2026-0056",
+  "claimant_id": "CUST-4853",
+  "claimant_name": "Benjamin Brown",
+  "policy_id": "POL-MOT-001",
+  "category": "Duplicate Invoice Fraud",
+  "claim_text": "Claim for bumper repair and paint respray following collision. Attached invoice receipt matches identical invoice number and transaction hash as claim CLM-2025-8812 submitted 3 months ago.",
+  "claimed_amount": 2086.5,
+  "claimed_items": [
+    {
+      "item": "Bumper Respray and Repair",
+      "amount": 1950.0
+    }
+  ],
+  "incident_date": "2026-06-25",
+  "receipt_hash": "DUP-HASH-99812-REPAIR",
+  "expected_decision": "ESCALATED",
+  "expected_cited_clauses": [
+    "Clause 1.1"
+  ],
+  "is_fraud": true,
+  "fraud_reason": "Duplicate invoice hash detected across previous claims database.",
+  "requires_human_review": true,
+  "evaluation_notes": "Flagged by fraud guard and escalated to SIU (Special Investigation Unit)."
+}

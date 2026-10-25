@@ -1,0 +1,30 @@
+{
+  "claim_id": "CLM-2026-0110",
+  "claimant_id": "CUST-4505",
+  "claimant_name": "Michael Wilson",
+  "policy_id": "POL-HOM-001",
+  "category": "Major Fire Damage",
+  "claim_text": "Kitchen grease fire spread to roof rafters and attic structure. Fire service response extinguished flames but upper level sustained major structural charring. Claim includes temporary rental housing.",
+  "claimed_amount": 28215.0,
+  "claimed_items": [
+    {
+      "item": "Roof & Structural Timber Rebuilding",
+      "amount": 22000.0
+    },
+    {
+      "item": "Temporary Accommodation 3 Months",
+      "amount": 6500.0
+    }
+  ],
+  "incident_date": "2026-04-02",
+  "receipt_hash": "HASH-CLM-2026-0110-81121",
+  "expected_decision": "ESCALATED",
+  "expected_cited_clauses": [
+    "Clause 1.1",
+    "Clause 2.2"
+  ],
+  "is_fraud": false,
+  "fraud_reason": null,
+  "requires_human_review": true,
+  "evaluation_notes": "High value claim ($28.5k) routed to human adjuster for contractor quote validation."
+}

@@ -1,0 +1,35 @@
+{
+  "claim_id": "CLM-2026-0111",
+  "claimant_id": "CUST-8633",
+  "claimant_name": "Charlotte Johnson",
+  "policy_id": "POL-HOM-002",
+  "category": "Burglary Forced Entry",
+  "claim_text": "Apartment rear patio door forced open with crowbar while tenant was at work. Burglar took 65-inch OLED television, gaming console, laptop, and leather jacket. Police evidence of jimmy marks attached.",
+  "claimed_amount": 2945.0,
+  "claimed_items": [
+    {
+      "item": "65-inch 4K OLED TV",
+      "amount": 1600.0
+    },
+    {
+      "item": "Gaming Console & Controllers",
+      "amount": 600.0
+    },
+    {
+      "item": "Laptop Computer",
+      "amount": 900.0
+    }
+  ],
+  "incident_date": "2026-05-18",
+  "receipt_hash": "HASH-CLM-2026-0111-65069",
+  "expected_decision": "APPROVED",
+  "expected_cited_clauses": [
+    "Clause 1.1",
+    "Clause 2.1",
+    "Clause 2.2"
+  ],
+  "is_fraud": false,
+  "fraud_reason": null,
+  "requires_human_review": false,
+  "evaluation_notes": "Forcible burglary covered minus $200 deductible; items within single-item limit."
+}

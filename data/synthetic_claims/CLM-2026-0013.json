@@ -1,0 +1,34 @@
+{
+  "claim_id": "CLM-2026-0013",
+  "claimant_id": "CUST-3664",
+  "claimant_name": "Isabella Lopez",
+  "policy_id": "POL-HOM-001",
+  "category": "Sudden Pipe Burst",
+  "claim_text": "Internal second-floor bathroom copper supply pipe burst suddenly due to freezing temperatures, causing ceiling collapse and structural drywall flooding into ground floor living room.",
+  "claimed_amount": 4560.0,
+  "claimed_items": [
+    {
+      "item": "Drywall and Ceiling Structural Restoration",
+      "amount": 2800.0
+    },
+    {
+      "item": "Plumbing Pipe Replacement & Testing",
+      "amount": 800.0
+    },
+    {
+      "item": "Hardwood Floor Drying & Remediation",
+      "amount": 1200.0
+    }
+  ],
+  "incident_date": "2026-01-20",
+  "receipt_hash": "HASH-CLM-2026-0013-44993",
+  "expected_decision": "APPROVED",
+  "expected_cited_clauses": [
+    "Clause 1.3",
+    "Clause 2.1"
+  ],
+  "is_fraud": false,
+  "fraud_reason": null,
+  "requires_human_review": false,
+  "evaluation_notes": "Sudden bursting covered minus $500 property deductible."
+}

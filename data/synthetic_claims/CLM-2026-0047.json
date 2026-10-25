@@ -1,0 +1,35 @@
+{
+  "claim_id": "CLM-2026-0047",
+  "claimant_id": "CUST-2235",
+  "claimant_name": "Lucas Moore",
+  "policy_id": "POL-MOT-001",
+  "category": "Accidental Collision",
+  "claim_text": "Insured vehicle collided with concrete guardrail during heavy rain. Front bumper shattered, radiator ruptured, hood crumpled. Vehicle towed to authorized repair centre.",
+  "claimed_amount": 2632.0,
+  "claimed_items": [
+    {
+      "item": "Front Bumper Replacement (Plastic)",
+      "amount": 800.0
+    },
+    {
+      "item": "Radiator Replacement",
+      "amount": 600.0
+    },
+    {
+      "item": "Hood Panel Beating & Paint",
+      "amount": 1400.0
+    }
+  ],
+  "incident_date": "2026-02-14",
+  "receipt_hash": "HASH-CLM-2026-0047-95477",
+  "expected_decision": "APPROVED",
+  "expected_cited_clauses": [
+    "Clause 1.1",
+    "Clause 2.1",
+    "Clause 2.2"
+  ],
+  "is_fraud": false,
+  "fraud_reason": null,
+  "requires_human_review": false,
+  "evaluation_notes": "Standard collision covered minus $350 deductible and 50% depreciation on plastic bumper."
+}

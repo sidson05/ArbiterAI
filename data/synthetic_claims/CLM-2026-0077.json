@@ -1,0 +1,40 @@
+{
+  "claim_id": "CLM-2026-0077",
+  "claimant_id": "CUST-1406",
+  "claimant_name": "Olivia Hernandez",
+  "policy_id": "POL-HLT-001",
+  "category": "Inpatient Hospitalization",
+  "claim_text": "Claimant admitted to St. Jude Hospital for 3 days due to acute viral pneumonia. Underwent IV antibiotic therapy, chest X-rays, blood cultures, and 3 nights in standard single room. Total hospital bill $3,450.",
+  "claimed_amount": 3622.5,
+  "claimed_items": [
+    {
+      "item": "Room & Board 3 days",
+      "amount": 900.0
+    },
+    {
+      "item": "Diagnostic X-rays & Blood Tests",
+      "amount": 850.0
+    },
+    {
+      "item": "Physician & Specialist Fees",
+      "amount": 700.0
+    },
+    {
+      "item": "Pharmacy & Medication",
+      "amount": 1000.0
+    }
+  ],
+  "incident_date": "2026-03-12",
+  "receipt_hash": "HASH-CLM-2026-0077-63964",
+  "expected_decision": "APPROVED",
+  "expected_cited_clauses": [
+    "Clause 1.1",
+    "Clause 1.2",
+    "Clause 1.3",
+    "Clause 3.1"
+  ],
+  "is_fraud": false,
+  "fraud_reason": null,
+  "requires_human_review": false,
+  "evaluation_notes": "Standard covered inpatient treatment minus $250 deductible."
+}

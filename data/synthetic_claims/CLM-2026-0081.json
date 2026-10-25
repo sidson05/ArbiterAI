@@ -1,0 +1,33 @@
+{
+  "claim_id": "CLM-2026-0081",
+  "claimant_id": "CUST-4164",
+  "claimant_name": "Benjamin Hernandez",
+  "policy_id": "POL-HLT-001",
+  "category": "High Value Orthopedic",
+  "claim_text": "Total knee replacement surgery following severe osteoarthritic degradation. Implant surgery, 5 days hospital stay, physical therapy. Total claimed amount $14,500.",
+  "claimed_amount": 13920.0,
+  "claimed_items": [
+    {
+      "item": "Knee Prosthesis Implant",
+      "amount": 5500.0
+    },
+    {
+      "item": "Surgical Theatre & Surgeon Fee",
+      "amount": 5000.0
+    },
+    {
+      "item": "Room Rent & Nursing 5 days",
+      "amount": 4000.0
+    }
+  ],
+  "incident_date": "2026-07-20",
+  "receipt_hash": "HASH-CLM-2026-0081-19099",
+  "expected_decision": "ESCALATED",
+  "expected_cited_clauses": [
+    "Clause 3.3"
+  ],
+  "is_fraud": false,
+  "fraud_reason": null,
+  "requires_human_review": true,
+  "evaluation_notes": "High value claim exceeding $10,000 threshold and subject to Joint Replacement Sub-Limit."
+}

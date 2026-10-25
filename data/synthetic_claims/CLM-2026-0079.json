@@ -1,0 +1,29 @@
+{
+  "claim_id": "CLM-2026-0079",
+  "claimant_id": "CUST-7267",
+  "claimant_name": "Emma Thomas",
+  "policy_id": "POL-HLT-001",
+  "category": "Pre-Existing Exclusion",
+  "claim_text": "Claimant hospitalized for acute ischemic stroke and secondary hypertension. Medical records reveal ongoing treatment for chronic hypertension diagnosed 18 months prior to policy inception. Current policy active for 8 months.",
+  "claimed_amount": 7488.0,
+  "claimed_items": [
+    {
+      "item": "ICU Care 2 days",
+      "amount": 3200.0
+    },
+    {
+      "item": "Neurological Consultation & Medication",
+      "amount": 4600.0
+    }
+  ],
+  "incident_date": "2026-05-10",
+  "receipt_hash": "HASH-CLM-2026-0079-70332",
+  "expected_decision": "REJECTED",
+  "expected_cited_clauses": [
+    "Clause 4.1"
+  ],
+  "is_fraud": false,
+  "fraud_reason": null,
+  "requires_human_review": false,
+  "evaluation_notes": "Pre-existing condition within 36-month exclusion waiting period."
+}
