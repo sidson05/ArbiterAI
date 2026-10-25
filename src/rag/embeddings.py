@@ -1,7 +1,9 @@
 import hashlib
+
 import numpy as np
-from typing import List
+
 from src.core.config import settings
+
 
 class EmbeddingService:
     def __init__(self):
@@ -10,7 +12,7 @@ class EmbeddingService:
         self._openai_disabled = False
         self._gemini_disabled = False
 
-    async def get_embedding(self, text: str) -> List[float]:
+    async def get_embedding(self, text: str) -> list[float]:
         # If API keys are present and configured, use live provider
         if not self._openai_disabled and settings.OPENAI_API_KEY and "your_openai" not in settings.OPENAI_API_KEY:
             try:
@@ -39,14 +41,14 @@ class EmbeddingService:
         # Deterministic semantic hash embedding for offline CI/CD and tests
         return self._deterministic_hash_embedding(text)
 
-    async def get_embeddings(self, texts: List[str]) -> List[List[float]]:
+    async def get_embeddings(self, texts: list[str]) -> list[list[float]]:
         results = []
         for t in texts:
             emb = await self.get_embedding(t)
             results.append(emb)
         return results
 
-    def _deterministic_hash_embedding(self, text: str) -> List[float]:
+    def _deterministic_hash_embedding(self, text: str) -> list[float]:
         """
         Creates a normalized, pseudo-semantic vector representation based on
         token frequencies and hash buckets. Enables full local testing and deterministic eval.

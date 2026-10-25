@@ -16,6 +16,23 @@ services:
       interval: 5s
       timeout: 5s
       retries: 5
+    restart: unless-stopped
+
+  app:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: insurance_claims_app
+    environment:
+      - DATABASE_URL=postgresql+asyncpg://postgres:postgres@postgres:5432/insurance_claims
+      - SYNC_DATABASE_URL=postgresql://postgres:postgres@postgres:5432/insurance_claims
+      - DEFAULT_LLM_PROVIDER=openai
+    ports:
+      - "8000:8000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    restart: unless-stopped
 
 volumes:
   pgdata:

@@ -1,7 +1,8 @@
-from typing import Dict, Any, List
-from src.agent.state import ClaimState, FraudSignal
-from src.agent.prompts import FRAUD_DETECTOR_SYSTEM_PROMPT
+from typing import Any
+
 from src.agent.llm_factory import get_llm
+from src.agent.prompts import FRAUD_DETECTOR_SYSTEM_PROMPT
+from src.agent.state import ClaimState, FraudSignal
 
 KNOWN_DUPLICATE_RECEIPT_HASHES = {
     "DUP-HASH-99812-REPAIR",
@@ -9,14 +10,14 @@ KNOWN_DUPLICATE_RECEIPT_HASHES = {
     "REUSED-INVOICE-001"
 }
 
-async def check_fraud_node(state: ClaimState) -> Dict[str, Any]:
+async def check_fraud_node(state: ClaimState) -> dict[str, Any]:
     extracted = state.get("extracted_data")
     if not extracted:
         return {"fraud_signals": FraudSignal(is_suspicious=False, risk_score=0.0)}
 
-    flags: List[str] = []
+    flags: list[str] = []
     risk_score = 0.0
-    rationale_parts: List[str] = []
+    rationale_parts: list[str] = []
 
     # 1. Deterministic Rule Check: Duplicate Invoice Hash
     if extracted.receipt_hash and (

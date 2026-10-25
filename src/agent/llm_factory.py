@@ -1,7 +1,9 @@
-from typing import Optional, Any
+from typing import Any
+
 from src.core.config import settings
 
-def get_llm(provider: Optional[str] = None, model_name: Optional[str] = None, temperature: float = 0.0) -> Any:
+
+def get_llm(provider: str | None = None, model_name: str | None = None, temperature: float = 0.0) -> Any:
     prov = provider or settings.DEFAULT_LLM_PROVIDER
     mod = model_name or settings.DEFAULT_MODEL_NAME
 

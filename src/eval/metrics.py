@@ -1,8 +1,9 @@
-from typing import List, Dict, Any
+from typing import Any
+
 
 class EvaluationMetrics:
     @staticmethod
-    def calculate_retrieval_hit_rate(predictions: List[Dict[str, Any]]) -> float:
+    def calculate_retrieval_hit_rate(predictions: list[dict[str, Any]]) -> float:
         """Recall@k: Proportion of claims where at least one expected clause is in retrieved clauses."""
         hits = 0
         total = 0
@@ -17,7 +18,7 @@ class EvaluationMetrics:
         return round((hits / total) * 100, 2) if total > 0 else 0.0
 
     @staticmethod
-    def calculate_decision_accuracy(predictions: List[Dict[str, Any]]) -> Dict[str, Any]:
+    def calculate_decision_accuracy(predictions: list[dict[str, Any]]) -> dict[str, Any]:
         """Accuracy of the agent's decision against ground-truth labels."""
         correct = 0
         total = len(predictions)
@@ -41,7 +42,7 @@ class EvaluationMetrics:
         return {"overall_accuracy_pct": acc, "total_claims": total, "confusion": confusion}
 
     @staticmethod
-    def calculate_groundedness(predictions: List[Dict[str, Any]]) -> float:
+    def calculate_groundedness(predictions: list[dict[str, Any]]) -> float:
         """
         Groundedness: Percentage of decisions where all cited clauses actually exist
         in the policy and support the finding.
@@ -63,7 +64,7 @@ class EvaluationMetrics:
         return round((grounded / total) * 100, 2) if total > 0 else 0.0
 
     @staticmethod
-    def calculate_human_routing_stats(predictions: List[Dict[str, Any]]) -> Dict[str, Any]:
+    def calculate_human_routing_stats(predictions: list[dict[str, Any]]) -> dict[str, Any]:
         """Efficiency of human routing and Straight-Through Processing (STP)."""
         total = len(predictions)
         routed_to_human = sum(1 for p in predictions if p.get("requires_human_review"))

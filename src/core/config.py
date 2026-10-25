@@ -1,5 +1,6 @@
+
 from pydantic_settings import BaseSettings, SettingsConfigDict
-from typing import Optional
+
 
 class Settings(BaseSettings):
     # App
@@ -16,17 +17,17 @@ class Settings(BaseSettings):
     DEFAULT_MODEL_NAME: str = "gpt-4o-mini"
     DEFAULT_EMBEDDING_MODEL: str = "text-embedding-3-small"
     
-    OPENAI_API_KEY: Optional[str] = None
-    ANTHROPIC_API_KEY: Optional[str] = None
-    GEMINI_API_KEY: Optional[str] = None
+    OPENAI_API_KEY: str | None = None
+    ANTHROPIC_API_KEY: str | None = None
+    GEMINI_API_KEY: str | None = None
 
     # Thresholds
     HIGH_VALUE_THRESHOLD: float = 10000.00
     CONFIDENCE_THRESHOLD: float = 0.85
 
     # Langfuse
-    LANGFUSE_PUBLIC_KEY: Optional[str] = None
-    LANGFUSE_SECRET_KEY: Optional[str] = None
+    LANGFUSE_PUBLIC_KEY: str | None = None
+    LANGFUSE_SECRET_KEY: str | None = None
     LANGFUSE_HOST: str = "https://cloud.langfuse.com"
 
     # AWS

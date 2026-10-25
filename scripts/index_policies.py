@@ -1,8 +1,10 @@
 import asyncio
 import glob
 import os
+
 from src.rag.chunker import ClauseAwareChunker
 from src.rag.vector_store import vector_store
+
 
 async def index_all_policies():
     policy_files = glob.glob("data/policies/*.md")

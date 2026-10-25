@@ -1,13 +1,15 @@
-from typing import Dict, Any, List
+from typing import Any
+
 from src.agent.state import ClaimState
 from src.core.config import settings
 
-def evaluate_gatekeeper_node(state: ClaimState) -> Dict[str, Any]:
+
+def evaluate_gatekeeper_node(state: ClaimState) -> dict[str, Any]:
     extracted = state.get("extracted_data")
     coverage = state.get("coverage_finding")
     fraud = state.get("fraud_signals")
 
-    review_reasons: List[str] = []
+    review_reasons: list[str] = []
     requires_human_review = False
 
     # 1. High-Value Claim Rule

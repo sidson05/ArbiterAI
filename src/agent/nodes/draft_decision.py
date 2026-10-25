@@ -1,9 +1,11 @@
-from typing import Dict, Any
-from src.agent.state import ClaimState
-from src.agent.prompts import DECISION_DRAFTER_SYSTEM_PROMPT
-from src.agent.llm_factory import get_llm
+from typing import Any
 
-async def draft_decision_node(state: ClaimState) -> Dict[str, Any]:
+from src.agent.llm_factory import get_llm
+from src.agent.prompts import DECISION_DRAFTER_SYSTEM_PROMPT
+from src.agent.state import ClaimState
+
+
+async def draft_decision_node(state: ClaimState) -> dict[str, Any]:
     extracted = state.get("extracted_data")
     coverage = state.get("coverage_finding")
     fraud = state.get("fraud_signals")
@@ -58,13 +60,13 @@ async def draft_decision_node(state: ClaimState) -> Dict[str, Any]:
     if not letter:
         # Standard professional insurance determination summary
         lines = [
-            f"OFFICIAL CLAIMS ADJUDICATION DETERMINATION",
+            "OFFICIAL CLAIMS ADJUDICATION DETERMINATION",
             f"Claim Reference: {state.get('claim_id')}",
             f"Policyholder ID: {extracted.claimant_id if extracted else 'N/A'}",
             f"Policy Contract: {extracted.policy_id if extracted else 'N/A'}",
             f"Status: {final_decision}",
-            f"",
-            f"Financial Settlement:",
+            "",
+            "Financial Settlement:",
             f"  - Claimed Amount:    ${claimed_amt:,.2f}",
             f"  - Deductibles:       ${deductibles:,.2f}",
         ]
@@ -72,13 +74,13 @@ async def draft_decision_node(state: ClaimState) -> Dict[str, Any]:
             lines.append(f"  - Applied Sub-limit: ${sub_limit:,.2f}")
         lines.extend([
             f"  - Net Payable:       ${approved_amt:,.2f}",
-            f"",
+            "",
             f"Cited Contractual Clauses: {', '.join(clauses_cited) if clauses_cited else 'None'}",
             f"Reasoning & Findings: {coverage.reasoning if coverage else 'N/A'}"
         ])
         if requires_human_review and not human_override:
             lines.extend([
-                f"",
+                "",
                 f"Notice: This claim has been placed in pending status and escalated to an authorized senior claims adjuster for verification: {', '.join(state.get('review_reasons', []))}"
             ])
         letter = "\n".join(lines)

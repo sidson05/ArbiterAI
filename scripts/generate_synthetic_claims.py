@@ -1,7 +1,7 @@
 import json
 import os
 import random
-from typing import List, Dict, Any
+from typing import Any
 
 random.seed(42)
 
@@ -278,7 +278,7 @@ CLAIMS_TEMPLATES = [
     }
 ]
 
-def generate_dataset(num_claims: int = 120) -> List[Dict[str, Any]]:
+def generate_dataset(num_claims: int = 120) -> list[dict[str, Any]]:
     claims = []
     base_templates = CLAIMS_TEMPLATES
     n_templates = len(base_templates)

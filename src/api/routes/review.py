@@ -1,6 +1,6 @@
-from typing import Optional
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel, Field
+
 from src.agent.graph import claims_agent
 from src.api.routes.claims import CLAIMS_DB
 

@@ -1,6 +1,8 @@
-import os
 import glob
+import os
+
 from src.rag.chunker import ClauseAwareChunker
+
 
 def test_chunker_on_all_policies():
     policy_files = glob.glob("data/policies/*.md")

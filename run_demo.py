@@ -1,9 +1,11 @@
 import asyncio
-import json
 import glob
+import json
+
 from src.agent.graph import build_claims_graph
 from src.rag.chunker import ClauseAwareChunker
 from src.rag.vector_store import vector_store
+
 
 async def run_live_demonstration():
     print("=" * 80)
@@ -68,7 +70,7 @@ async def run_live_demonstration():
     print(f"  Deductible Applied: ${cov_1.deductibles_applied:,.2f}")
     print(f"  Approved Payout:    ${cov_1.recommended_payout:,.2f}")
     print(f"  Cited Clauses:      {', '.join(cov_1.cited_clause_numbers)}")
-    print(f"  Straight-Through:   Yes (Zero human intervention required)")
+    print("  Straight-Through:   Yes (Zero human intervention required)")
 
     # --- Scenario 2: Excluded Cosmetic Surgery Claim ---
     print("\n" + "-" * 80)
@@ -104,7 +106,7 @@ async def run_live_demonstration():
     cov_2 = res_2["coverage_finding"]
     print(f"  Decision:           [{res_2['final_decision']}]")
     print(f"  Exclusion Trigger:  {', '.join(cov_2.cited_clause_numbers)}")
-    print(f"  Approved Payout:    $0.00")
+    print("  Approved Payout:    $0.00")
     print(f"  Legal Reasoning:    {cov_2.reasoning}")
 
     # --- Scenario 3: High-Value Claim Triggering Human-in-the-Loop Interrupt ---
@@ -146,7 +148,7 @@ async def run_live_demonstration():
 
     # Check state at checkpoint
     snapshot = agent.get_state(config_3)
-    print(f"  -> GATEKEEPER TRIGGERED: Claim halted at checkpoint.")
+    print("  -> GATEKEEPER TRIGGERED: Claim halted at checkpoint.")
     print(f"  -> Checkpoint Node: {snapshot.next}")
     print(f"  -> Escalation Reason: {snapshot.values['review_reasons'][0]}")
 
@@ -169,7 +171,7 @@ async def run_live_demonstration():
 
     # Resuming graph
     resumed = await agent.ainvoke(None, config=config_3)
-    print(f"  -> Resumed Execution: State Machine finalized.")
+    print("  -> Resumed Execution: State Machine finalized.")
     print(f"  Final Determination: [{resumed['final_decision']}]")
     print(f"  Approved Settlement:   ${resumed['human_override']['approved_amount']:,.2f}")
     print(f"  Adjuster Attribution:  {resumed['human_override']['adjuster_id']}")

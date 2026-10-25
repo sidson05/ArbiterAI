@@ -1,8 +1,10 @@
 import asyncio
 import glob
+
 from src.agent.graph import build_claims_graph
 from src.rag.chunker import ClauseAwareChunker
 from src.rag.vector_store import vector_store
+
 
 async def setup_test_index():
     policy_files = glob.glob("data/policies/*.md")

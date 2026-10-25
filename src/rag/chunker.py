@@ -1,6 +1,8 @@
 import re
-from typing import List, Dict, Any, Optional
+from typing import Any
+
 from pydantic import BaseModel
+
 
 class ClauseChunk(BaseModel):
     policy_id: str
@@ -9,7 +11,7 @@ class ClauseChunk(BaseModel):
     title: str
     content: str
     deductible: float = 0.0
-    sub_limit: Optional[float] = None
+    sub_limit: float | None = None
 
 class ClauseAwareChunker:
     """
@@ -18,8 +20,8 @@ class ClauseAwareChunker:
     """
 
     @staticmethod
-    def parse_markdown_policy(markdown_text: str, default_policy_id: str = "") -> List[ClauseChunk]:
-        chunks: List[ClauseChunk] = []
+    def parse_markdown_policy(markdown_text: str, default_policy_id: str = "") -> list[ClauseChunk]:
+        chunks: list[ClauseChunk] = []
 
         # Extract Policy Identifier
         policy_id_match = re.search(r"\*\*Policy Identifier:\*\*\s*([A-Z0-9\-]+)", markdown_text)
@@ -84,7 +86,7 @@ class NaiveChunker:
     in evaluation to prove the superiority of clause-aware chunking.
     """
     @staticmethod
-    def chunk(text: str, chunk_size: int = 500, overlap: int = 50) -> List[Dict[str, Any]]:
+    def chunk(text: str, chunk_size: int = 500, overlap: int = 50) -> list[dict[str, Any]]:
         chunks = []
         start = 0
         text_len = len(text)

@@ -1,14 +1,16 @@
-from typing import Optional
-from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession, async_sessionmaker
-from sqlalchemy.orm import declarative_base, Mapped, mapped_column, relationship
-from sqlalchemy import String, Text, Numeric, Date, DateTime, JSON, ForeignKey, func
+
+from sqlalchemy import JSON, Date, DateTime, ForeignKey, Numeric, String, Text, func
+from sqlalchemy.ext.asyncio import AsyncSession, async_sessionmaker, create_async_engine
+from sqlalchemy.orm import Mapped, declarative_base, mapped_column, relationship
+
 try:
     from pgvector.sqlalchemy import Vector
 except ImportError:
     from sqlalchemy import JSON as Vector
 
-from src.core.config import settings
 import uuid
+
+from src.core.config import settings
 
 Base = declarative_base()
 
@@ -35,7 +37,7 @@ class PolicyClause(Base):
     title: Mapped[str] = mapped_column(String(255), nullable=False)
     content: Mapped[str] = mapped_column(Text, nullable=False)
     deductible: Mapped[float] = mapped_column(Numeric(10, 2), default=0.00)
-    sub_limit: Mapped[Optional[float]] = mapped_column(Numeric(10, 2), nullable=True)
+    sub_limit: Mapped[float | None] = mapped_column(Numeric(10, 2), nullable=True)
     embedding = mapped_column(Vector(1536), nullable=True)
     created_at: Mapped[DateTime] = mapped_column(DateTime(timezone=True), server_default=func.now())
 
@@ -51,8 +53,8 @@ class Claim(Base):
     claimed_amount: Mapped[float] = mapped_column(Numeric(10, 2), nullable=False)
     approved_amount: Mapped[float] = mapped_column(Numeric(10, 2), default=0.00)
     status: Mapped[str] = mapped_column(String(32), default="PENDING")
-    document_s3_key: Mapped[Optional[str]] = mapped_column(String(512), nullable=True)
-    decision_summary: Mapped[Optional[str]] = mapped_column(Text, nullable=True)
+    document_s3_key: Mapped[str | None] = mapped_column(String(512), nullable=True)
+    decision_summary: Mapped[str | None] = mapped_column(Text, nullable=True)
     created_at: Mapped[DateTime] = mapped_column(DateTime(timezone=True), server_default=func.now())
     updated_at: Mapped[DateTime] = mapped_column(DateTime(timezone=True), server_default=func.now(), onupdate=func.now())
 
@@ -62,12 +64,12 @@ class ClaimAuditLog(Base):
     id: Mapped[uuid.UUID] = mapped_column(primary_key=True, default=uuid.uuid4)
     claim_id: Mapped[str] = mapped_column(String(64), ForeignKey("claims.id", ondelete="CASCADE"), nullable=False)
     step_name: Mapped[str] = mapped_column(String(64), nullable=False)
-    model_name: Mapped[Optional[str]] = mapped_column(String(64), nullable=True)
+    model_name: Mapped[str | None] = mapped_column(String(64), nullable=True)
     input_payload: Mapped[dict] = mapped_column(JSON, nullable=False)
     output_payload: Mapped[dict] = mapped_column(JSON, nullable=False)
-    confidence_score: Mapped[Optional[float]] = mapped_column(Numeric(5, 4), nullable=True)
-    latency_ms: Mapped[Optional[int]] = mapped_column(nullable=True)
-    token_cost: Mapped[Optional[float]] = mapped_column(Numeric(8, 6), nullable=True)
+    confidence_score: Mapped[float | None] = mapped_column(Numeric(5, 4), nullable=True)
+    latency_ms: Mapped[int | None] = mapped_column(nullable=True)
+    token_cost: Mapped[float | None] = mapped_column(Numeric(8, 6), nullable=True)
     performed_by: Mapped[str] = mapped_column(String(64), default="AGENT")
     created_at: Mapped[DateTime] = mapped_column(DateTime(timezone=True), server_default=func.now())
 

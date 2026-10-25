@@ -1,10 +1,13 @@
 import asyncio
+import glob
+
 import pytest
-from httpx import AsyncClient, ASGITransport
+from httpx import ASGITransport, AsyncClient
+
 from src.api.main import app
 from src.rag.chunker import ClauseAwareChunker
 from src.rag.vector_store import vector_store
-import glob
+
 
 def init_test_policies():
     async def _index_all():

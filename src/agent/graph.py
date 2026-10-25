@@ -1,15 +1,18 @@
-from typing import Dict, Any, Optional
-from langgraph.graph import StateGraph, START, END
-from langgraph.checkpoint.memory import MemorySaver
-from src.agent.state import ClaimState
-from src.agent.nodes.extractor import extract_claim_node
-from src.agent.nodes.retriever import retrieve_clauses_node
-from src.agent.nodes.fraud_check import check_fraud_node
-from src.agent.nodes.coverage import assess_coverage_node
-from src.agent.nodes.gatekeeper import evaluate_gatekeeper_node, route_after_gate
-from src.agent.nodes.draft_decision import draft_decision_node
+from typing import Any
 
-def human_review_interrupt_node(state: ClaimState) -> Dict[str, Any]:
+from langgraph.checkpoint.memory import MemorySaver
+from langgraph.graph import END, START, StateGraph
+
+from src.agent.nodes.coverage import assess_coverage_node
+from src.agent.nodes.draft_decision import draft_decision_node
+from src.agent.nodes.extractor import extract_claim_node
+from src.agent.nodes.fraud_check import check_fraud_node
+from src.agent.nodes.gatekeeper import evaluate_gatekeeper_node, route_after_gate
+from src.agent.nodes.retriever import retrieve_clauses_node
+from src.agent.state import ClaimState
+
+
+def human_review_interrupt_node(state: ClaimState) -> dict[str, Any]:
     """
     Breakpoint node for human adjuster inspection.
     The graph pauses here before finalization if triggered by the gatekeeper.
@@ -23,7 +26,7 @@ def human_review_interrupt_node(state: ClaimState) -> Dict[str, Any]:
         "audit_trail": state.get("audit_trail", []) + [audit_entry]
     }
 
-def build_claims_graph(checkpointer: Optional[Any] = None) -> Any:
+def build_claims_graph(checkpointer: Any | None = None) -> Any:
     workflow = StateGraph(ClaimState)
 
     # Add Nodes

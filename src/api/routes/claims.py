@@ -1,14 +1,14 @@
-import json
-from typing import Dict, Any, List, Optional
-from fastapi import APIRouter, HTTPException, BackgroundTasks
+from typing import Any
+
+from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel, Field
+
 from src.agent.graph import claims_agent
-from src.agent.state import ClaimState
 
 router = APIRouter(prefix="/claims", tags=["Claims"])
 
 # In-memory store for claims state / thread tracking
-CLAIMS_DB: Dict[str, Dict[str, Any]] = {}
+CLAIMS_DB: dict[str, dict[str, Any]] = {}
 
 class SubmitClaimRequest(BaseModel):
     claim_id: str
@@ -18,19 +18,19 @@ class SubmitClaimRequest(BaseModel):
     claimed_amount: float
     category: str
     claim_text: str
-    claimed_items: List[Dict[str, Any]] = Field(default_factory=list)
-    receipt_hash: Optional[str] = None
+    claimed_items: list[dict[str, Any]] = Field(default_factory=list)
+    receipt_hash: str | None = None
 
 class SubmitClaimResponse(BaseModel):
     claim_id: str
     thread_id: str
     status: str
     requires_human_review: bool
-    review_reasons: List[str]
-    final_decision: Optional[str] = None
-    approved_amount: Optional[float] = None
-    cited_clauses: List[str] = Field(default_factory=list)
-    decision_summary: Optional[str] = None
+    review_reasons: list[str]
+    final_decision: str | None = None
+    approved_amount: float | None = None
+    cited_clauses: list[str] = Field(default_factory=list)
+    decision_summary: str | None = None
 
 @router.post("", response_model=SubmitClaimResponse)
 async def submit_claim(request: SubmitClaimRequest):

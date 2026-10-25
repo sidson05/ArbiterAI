@@ -1,8 +1,10 @@
-from typing import Dict, Any, List
+from typing import Any
+
 from src.agent.state import ClaimState, ClauseMatch
 from src.rag.vector_store import vector_store
 
-async def retrieve_clauses_node(state: ClaimState) -> Dict[str, Any]:
+
+async def retrieve_clauses_node(state: ClaimState) -> dict[str, Any]:
     extracted = state.get("extracted_data")
     if not extracted:
         return {"retrieved_clauses": []}
@@ -12,7 +14,7 @@ async def retrieve_clauses_node(state: ClaimState) -> Dict[str, Any]:
 
     raw_matches = await vector_store.search_clauses(query=query, policy_id=policy_id, k=3)
     
-    clause_matches: List[ClauseMatch] = [
+    clause_matches: list[ClauseMatch] = [
         ClauseMatch(
             policy_id=m["policy_id"],
             clause_number=m["clause_number"],

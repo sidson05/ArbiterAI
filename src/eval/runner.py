@@ -1,13 +1,14 @@
 import asyncio
-import json
-import os
-import time
 import glob
-from typing import List, Dict, Any
+import json
+import time
+from typing import Any
+
 from src.agent.graph import build_claims_graph
-from src.rag.chunker import ClauseAwareChunker, NaiveChunker
-from src.rag.vector_store import vector_store
 from src.eval.metrics import EvaluationMetrics
+from src.rag.chunker import ClauseAwareChunker
+from src.rag.vector_store import vector_store
+
 
 async def prepare_vector_store():
     policy_files = glob.glob("data/policies/*.md")
@@ -18,7 +19,7 @@ async def prepare_vector_store():
         for c in chunks:
             await vector_store.index_clause(c)
 
-async def run_evaluation(max_samples: int = 120) -> Dict[str, Any]:
+async def run_evaluation(max_samples: int = 120) -> dict[str, Any]:
     print("=" * 60)
     print("STARTING COMPREHENSIVE AGENTIC CLAIMS EVALUATION HARNESS")
     print("=" * 60)
@@ -28,7 +29,7 @@ async def run_evaluation(max_samples: int = 120) -> Dict[str, Any]:
 
     # 2. Load ground truth dataset
     with open("data/ground_truth_eval.json", "r", encoding="utf-8") as f:
-        ground_truth: List[Dict[str, Any]] = json.load(f)
+        ground_truth: list[dict[str, Any]] = json.load(f)
 
     samples = ground_truth[:max_samples]
     print(f"Loaded {len(samples)} labelled ground-truth claims for evaluation.")

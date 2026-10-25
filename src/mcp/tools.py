@@ -1,4 +1,5 @@
-from typing import Dict, Any, List, Optional
+from typing import Any
+
 from src.rag.vector_store import vector_store
 
 MOCK_PROVIDER_REGISTRY = {
@@ -20,7 +21,7 @@ MOCK_CLAIMANT_HISTORIES = {
     ]
 }
 
-def lookup_policy_clause_tool(policy_id: str, clause_number: str) -> Optional[Dict[str, Any]]:
+def lookup_policy_clause_tool(policy_id: str, clause_number: str) -> dict[str, Any] | None:
     """Look up a specific policy clause by ID and clause number."""
     for item in vector_store._memory_index:
         if item["policy_id"] == policy_id and item["clause_number"].lower() == clause_number.lower():
@@ -35,11 +36,11 @@ def lookup_policy_clause_tool(policy_id: str, clause_number: str) -> Optional[Di
             }
     return None
 
-def get_claimant_history_tool(claimant_id: str) -> List[Dict[str, Any]]:
+def get_claimant_history_tool(claimant_id: str) -> list[dict[str, Any]]:
     """Retrieve historical claims filed by a claimant in the past 24 months."""
     return MOCK_CLAIMANT_HISTORIES.get(claimant_id, [])
 
-def verify_provider_network_tool(provider_name: str, policy_type: str = "HEALTH") -> Dict[str, Any]:
+def verify_provider_network_tool(provider_name: str, policy_type: str = "HEALTH") -> dict[str, Any]:
     """Verify if a hospital, doctor, or garage is an authorized in-network partner."""
     info = MOCK_PROVIDER_REGISTRY.get(provider_name)
     if info:

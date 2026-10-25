@@ -1,10 +1,11 @@
-import re
-from typing import Dict, Any, List
-from src.agent.state import ClaimState, CoverageFinding
-from src.agent.prompts import COVERAGE_ASSESSOR_SYSTEM_PROMPT
-from src.agent.llm_factory import get_llm
+from typing import Any
 
-async def assess_coverage_node(state: ClaimState) -> Dict[str, Any]:
+from src.agent.llm_factory import get_llm
+from src.agent.prompts import COVERAGE_ASSESSOR_SYSTEM_PROMPT
+from src.agent.state import ClaimState, CoverageFinding
+
+
+async def assess_coverage_node(state: ClaimState) -> dict[str, Any]:
     extracted = state.get("extracted_data")
     clauses = state.get("retrieved_clauses", [])
 
@@ -116,8 +117,7 @@ async def assess_coverage_node(state: ClaimState) -> Dict[str, Any]:
                 if "exclusion" not in c.section_name.lower():
                     cited_numbers.append(c.clause_number)
                     citations.append(c.content[:140] + "...")
-                    if c.deductible > deductible_to_apply:
-                        deductible_to_apply = c.deductible
+                    deductible_to_apply = max(deductible_to_apply, c.deductible)
                     if c.sub_limit:
                         sub_limit_to_apply = c.sub_limit
 

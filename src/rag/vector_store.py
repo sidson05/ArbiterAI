@@ -1,14 +1,17 @@
+from typing import Any
+
 import numpy as np
-from typing import List, Dict, Any, Optional
-from sqlalchemy import select, and_
-from src.core.database import AsyncSessionLocal, Policy, PolicyClause
-from src.rag.embeddings import embedding_service
+from sqlalchemy import select
+
+from src.core.database import AsyncSessionLocal, PolicyClause
 from src.rag.chunker import ClauseChunk
+from src.rag.embeddings import embedding_service
+
 
 class VectorStore:
     def __init__(self):
         # In-memory fallback index for local unit tests without live postgres
-        self._memory_index: List[Dict[str, Any]] = []
+        self._memory_index: list[dict[str, Any]] = []
 
     async def index_clause(self, chunk: ClauseChunk):
         emb = await embedding_service.get_embedding(f"{chunk.title}\n{chunk.content}")
@@ -44,7 +47,7 @@ class VectorStore:
             # Fallback quietly to memory index if postgres is not currently active
             pass
 
-    async def search_clauses(self, query: str, policy_id: str, k: int = 3) -> List[Dict[str, Any]]:
+    async def search_clauses(self, query: str, policy_id: str, k: int = 3) -> list[dict[str, Any]]:
         query_emb = await embedding_service.get_embedding(query)
         q_vec = np.array(query_emb, dtype=np.float32)
 

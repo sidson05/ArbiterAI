@@ -1,11 +1,13 @@
 import json
 import re
-from typing import Dict, Any
-from src.agent.state import ClaimState, ExtractedClaimData
-from src.agent.prompts import EXTRACTOR_SYSTEM_PROMPT
-from src.agent.llm_factory import get_llm
+from typing import Any
 
-async def extract_claim_node(state: ClaimState) -> Dict[str, Any]:
+from src.agent.llm_factory import get_llm
+from src.agent.prompts import EXTRACTOR_SYSTEM_PROMPT
+from src.agent.state import ClaimState, ExtractedClaimData
+
+
+async def extract_claim_node(state: ClaimState) -> dict[str, Any]:
     raw_text = state.get("raw_claim_text", "")
     llm = get_llm()
 
