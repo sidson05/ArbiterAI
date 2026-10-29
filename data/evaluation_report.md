@@ -9,7 +9,7 @@
 | **Citation Groundedness** | 82.0% | **100.0%** | PASSED |
 | **Straight-Through Processing (STP)** | 55.0% | **68.33%** | PASSED |
 | **Human Routing Precision** | 64.0% | **81.58%** | PASSED |
-| **Average Latency per Claim** | 1.85s | **0.076s** | PASSED |
+| **Average Latency per Claim** | 1.85s | **0.069s** | PASSED |
 
 
 ## 2. Adjudication Confusion Matrix
