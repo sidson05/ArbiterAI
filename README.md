@@ -1,4 +1,4 @@
-# Agentic RAG System for Insurance Claims Adjudication
+# ArbiterAI - Agentic RAG System for Insurance Claims Adjudication
 
 [![CI/CD Pipeline](https://github.com/your-username/insurance-claims-agentic-rag/actions/workflows/ci.yml/badge.svg)](https://github.com/your-username/insurance-claims-agentic-rag/actions)
 ![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)
